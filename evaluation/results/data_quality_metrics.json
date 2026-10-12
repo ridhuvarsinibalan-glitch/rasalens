@@ -1,0 +1,38 @@
+{
+  "raw_record_count": 19202,
+  "processed_record_count": 19195,
+  "sample_record_count": 800,
+  "provenance_distribution": {
+    "Food Ingredients and Recipe Dataset (Kaggle)": 13295,
+    "Indian Cuisine Recipe Dataset (Archana's Kitchen)": 5900
+  },
+  "average_ingredient_count": 11.14,
+  "average_cooking_time_minutes": 50.7,
+  "course_distribution": {
+    "Main Course": 11543,
+    "Dessert": 3230,
+    "Appetizer & Side": 2881,
+    "Breakfast": 837,
+    "Beverage": 704
+  },
+  "diet_distribution": {
+    "Vegetarian": 8511,
+    "Non-Vegetarian": 5819,
+    "Vegan": 4865
+  },
+  "cuisine_distribution": {
+    "American": 6052,
+    "Indian": 5270,
+    "Mediterranean": 2351,
+    "Italian": 2118,
+    "Asian": 1814,
+    "Mexican": 1590
+  },
+  "data_quality_score": 99.8,
+  "data_quality_methodology": {
+    "formula": "100 * (0.4 * completeness + 0.3 * uniqueness + 0.3 * validity)",
+    "completeness_score": 99.8,
+    "uniqueness_score": 99.5,
+    "validity_score": 99.96
+  }
+}

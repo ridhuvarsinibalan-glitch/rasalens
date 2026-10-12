@@ -1,0 +1,201 @@
+{
+  "model_name": "facebook/nllb-200-distilled-600M",
+  "evaluation_timestamp": "2026-10-06 06:51:04",
+  "testset_path": "data\\eval\\translation_testset.csv",
+  "testset_samples": 32,
+  "testset_status": "pending manual review",
+  "metric_libraries": {
+    "sacrebleu_version": "2.6.0"
+  },
+  "summary": {
+    "mean_bleu": 24.18,
+    "mean_chrf": 49.61,
+    "mean_latency_ms": 1120.4
+  },
+  "directions": {
+    "en_to_ta": {
+      "name": "English to Tamil",
+      "source_lang": "eng_Latn",
+      "target_lang": "tam_Taml",
+      "sample_count": 32,
+      "bleu": 14.5,
+      "chrf": 49.07,
+      "avg_latency_ms": 1638.0,
+      "sample_pairs": [
+        {
+          "id": 1,
+          "input": "Heat olive oil in a large skillet over medium heat.",
+          "reference": "ஒரு பெரிய வாணலியில் நடுத்தர தீயில் ஆலிவ் எண்ணெயை சூடாக்கவும்.",
+          "hypothesis": "ஒரு பெரிய குடலில் நடுத்தர வெப்பத்தில் ஆலிவ் எண்ணெயை சூடாக்குங்கள்.",
+          "latency_ms": 2665.9
+        },
+        {
+          "id": 2,
+          "input": "Add finely chopped onions and sauté until golden brown.",
+          "reference": "பொடியாக நறுக்கிய வெங்காயத்தைச் சேர்த்து பொன்னிறமாகும் வரை வதக்கவும்.",
+          "hypothesis": "அதில் நெல்லை வெட்டப்பட்ட மிளகு சேர்த்து பொன்னிறமாக மசாலா செய்யவும்.",
+          "latency_ms": 2665.9
+        },
+        {
+          "id": 3,
+          "input": "Stir in minced garlic and grated ginger, cooking for one minute until fragrant.",
+          "reference": "நசுக்கிய பூண்டு மற்றும் துருவிய இஞ்சியைச் சேர்த்து, நறுமணம் வரும் வரை ஒரு நிமிடம் வதக்கவும்.",
+          "hypothesis": "வெங்காயம் மற்றும் இஞ்சி சேர்த்து கலந்து ஒரு நிமிடம் சமைத்து, வாசனை வரும் வரை வதக்கவும்.",
+          "latency_ms": 2665.9
+        },
+        {
+          "id": 4,
+          "input": "Season with salt, black pepper, and ground cumin to taste.",
+          "reference": "சுவைக்கேற்ப உப்பு, கருப்பு மிளகுத்தூள் மற்றும் சீரகத்தூள் சேர்க்கவும்.",
+          "hypothesis": "உப்பு, கருப்பு மிளகு, மற்றும் அரைக்கப்பட்ட கமின் சுவைக்க.",
+          "latency_ms": 2665.9
+        },
+        {
+          "id": 5,
+          "input": "Bring the vegetable broth to a rolling boil in a deep saucepan.",
+          "reference": "ஒரு ஆழமான பாத்திரத்தில் காய்கறி குழம்பை நன்கு கொதிக்க வைக்கவும்.",
+          "hypothesis": "காய்கறி சூளையை ஆழமான ஒரு பானில் உருட்டவும்.",
+          "latency_ms": 2665.9
+        }
+      ]
+    },
+    "en_to_hi": {
+      "name": "English to Hindi",
+      "source_lang": "eng_Latn",
+      "target_lang": "hin_Deva",
+      "sample_count": 32,
+      "bleu": 23.06,
+      "chrf": 45.78,
+      "avg_latency_ms": 1164.5,
+      "sample_pairs": [
+        {
+          "id": 1,
+          "input": "Heat olive oil in a large skillet over medium heat.",
+          "reference": "एक बड़े पैन में मध्यम आंच पर जैतून का तेल गर्म करें।",
+          "hypothesis": "मध्यम गर्मी में बड़े बर्तन में जैतून का तेल गर्म करें।",
+          "latency_ms": 1026.7
+        },
+        {
+          "id": 2,
+          "input": "Add finely chopped onions and sauté until golden brown.",
+          "reference": "बारीक कटा हुआ प्याज डालें और सुनहरा भूरा होने तक भूनें।",
+          "hypothesis": "इसमें बारीक कटा हुआ प्याज डालें और सोने के रंग तक सॉट करें।",
+          "latency_ms": 1026.7
+        },
+        {
+          "id": 3,
+          "input": "Stir in minced garlic and grated ginger, cooking for one minute until fragrant.",
+          "reference": "कटा हुआ लहसुन और कद्दूकस किया हुआ अदरक डालें और खुशबू आने तक एक मिनट पकाएं।",
+          "hypothesis": "मसाले हुए लहसुन और गन्ने में मिलाकर एक मिनट तक पकाना, जब तक कि सुगंधित न हो जाए।",
+          "latency_ms": 1026.7
+        },
+        {
+          "id": 4,
+          "input": "Season with salt, black pepper, and ground cumin to taste.",
+          "reference": "स्वादानुसार नमक, काली मिर्च और पिसा हुआ जीरा डालें।",
+          "hypothesis": "नमक, काले मिर्च और मसाले हुए कमिन से स्वाद लें।",
+          "latency_ms": 1026.7
+        },
+        {
+          "id": 5,
+          "input": "Bring the vegetable broth to a rolling boil in a deep saucepan.",
+          "reference": "एक गहरे बर्तन में सब्जियों के शोरबे को अच्छी तरह उबालें।",
+          "hypothesis": "सब्जी की बर्तन को गहरे कटोरे में घूंघटते हुए उबालें।",
+          "latency_ms": 1026.7
+        }
+      ]
+    },
+    "ta_to_en": {
+      "name": "Tamil to English",
+      "source_lang": "tam_Taml",
+      "target_lang": "eng_Latn",
+      "sample_count": 32,
+      "bleu": 27.38,
+      "chrf": 48.03,
+      "avg_latency_ms": 838.8,
+      "sample_pairs": [
+        {
+          "id": 1,
+          "input": "ஒரு பெரிய வாணலியில் நடுத்தர தீயில் ஆலிவ் எண்ணெயை சூடாக்கவும்.",
+          "reference": "Heat olive oil in a large skillet over medium heat.",
+          "hypothesis": "Heat the olive oil in a large pot with a medium flame.",
+          "latency_ms": 848.7
+        },
+        {
+          "id": 2,
+          "input": "பொடியாக நறுக்கிய வெங்காயத்தைச் சேர்த்து பொன்னிறமாகும் வரை வதக்கவும்.",
+          "reference": "Add finely chopped onions and sauté until golden brown.",
+          "hypothesis": "Add the powdered garlic and stir until it is golden.",
+          "latency_ms": 848.7
+        },
+        {
+          "id": 3,
+          "input": "நசுக்கிய பூண்டு மற்றும் துருவிய இஞ்சியைச் சேர்த்து, நறுமணம் வரும் வரை ஒரு நிமிடம் வதக்கவும்.",
+          "reference": "Stir in minced garlic and grated ginger, cooking for one minute until fragrant.",
+          "hypothesis": "Add crushed garlic and poultry yeast and soak for a minute until the aroma is ready.",
+          "latency_ms": 848.7
+        },
+        {
+          "id": 4,
+          "input": "சுவைக்கேற்ப உப்பு, கருப்பு மிளகுத்தூள் மற்றும் சீரகத்தூள் சேர்க்கவும்.",
+          "reference": "Season with salt, black pepper, and ground cumin to taste.",
+          "hypothesis": "Add salt, black pepper and garlic to taste.",
+          "latency_ms": 848.7
+        },
+        {
+          "id": 5,
+          "input": "ஒரு ஆழமான பாத்திரத்தில் காய்கறி குழம்பை நன்கு கொதிக்க வைக்கவும்.",
+          "reference": "Bring the vegetable broth to a rolling boil in a deep saucepan.",
+          "hypothesis": "Keep the vegetable pulp well boiled in a deep bowl.",
+          "latency_ms": 848.7
+        }
+      ]
+    },
+    "hi_to_en": {
+      "name": "Hindi to English",
+      "source_lang": "hin_Deva",
+      "target_lang": "eng_Latn",
+      "sample_count": 32,
+      "bleu": 31.76,
+      "chrf": 55.56,
+      "avg_latency_ms": 840.3,
+      "sample_pairs": [
+        {
+          "id": 1,
+          "input": "एक बड़े पैन में मध्यम आंच पर जैतून का तेल गर्म करें।",
+          "reference": "Heat olive oil in a large skillet over medium heat.",
+          "hypothesis": "Heat the olive oil in a large pan on a medium frying pan.",
+          "latency_ms": 868.5
+        },
+        {
+          "id": 2,
+          "input": "बारीक कटा हुआ प्याज डालें और सुनहरा भूरा होने तक भूनें।",
+          "reference": "Add finely chopped onions and sauté until golden brown.",
+          "hypothesis": "Add a thin sliced onion and roast until golden brown.",
+          "latency_ms": 868.5
+        },
+        {
+          "id": 3,
+          "input": "कटा हुआ लहसुन और कद्दूकस किया हुआ अदरक डालें और खुशबू आने तक एक मिनट पकाएं।",
+          "reference": "Stir in minced garlic and grated ginger, cooking for one minute until fragrant.",
+          "hypothesis": "Add chopped garlic and pumpkin - cooked ginger and cook for a minute until the aroma is clear.",
+          "latency_ms": 868.5
+        },
+        {
+          "id": 4,
+          "input": "स्वादानुसार नमक, काली मिर्च और पिसा हुआ जीरा डालें।",
+          "reference": "Season with salt, black pepper, and ground cumin to taste.",
+          "hypothesis": "Add salt, black pepper and ground garlic to taste.",
+          "latency_ms": 868.5
+        },
+        {
+          "id": 5,
+          "input": "एक गहरे बर्तन में सब्जियों के शोरबे को अच्छी तरह उबालें।",
+          "reference": "Bring the vegetable broth to a rolling boil in a deep saucepan.",
+          "hypothesis": "Cook the vegetable soup well in a deep pot.",
+          "latency_ms": 868.5
+        }
+      ]
+    }
+  }
+}

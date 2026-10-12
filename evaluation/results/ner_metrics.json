@@ -1,0 +1,208 @@
+{
+  "concept": "Named Entity Recognition (NER)",
+  "task_description": "Strict span-exact extraction of culinary entities (FOOD_ITEM, QUANTITY, UNIT) evaluated on non-circular gold testset",
+  "evaluation_methodology": "strict_span_exact",
+  "gold_testset": {
+    "path": "data\\ner\\gold_test.jsonl",
+    "total_sentences": 160,
+    "status": "pending manual review",
+    "distribution": "50% recipe ingredient lines, 50% natural pantry sentences"
+  },
+  "silver_training_samples": 1000,
+  "training_epochs": 20,
+  "training_log": [
+    {
+      "epoch": 1,
+      "loss": 2235.9019
+    },
+    {
+      "epoch": 2,
+      "loss": 646.7725
+    },
+    {
+      "epoch": 3,
+      "loss": 448.4359
+    },
+    {
+      "epoch": 4,
+      "loss": 365.0512
+    },
+    {
+      "epoch": 5,
+      "loss": 283.9735
+    },
+    {
+      "epoch": 6,
+      "loss": 245.5509
+    },
+    {
+      "epoch": 7,
+      "loss": 193.507
+    },
+    {
+      "epoch": 8,
+      "loss": 209.4184
+    },
+    {
+      "epoch": 9,
+      "loss": 169.3174
+    },
+    {
+      "epoch": 10,
+      "loss": 162.9845
+    },
+    {
+      "epoch": 11,
+      "loss": 151.8013
+    },
+    {
+      "epoch": 12,
+      "loss": 96.317
+    },
+    {
+      "epoch": 13,
+      "loss": 127.6621
+    },
+    {
+      "epoch": 14,
+      "loss": 135.7245
+    },
+    {
+      "epoch": 15,
+      "loss": 122.9015
+    },
+    {
+      "epoch": 16,
+      "loss": 113.874
+    },
+    {
+      "epoch": 17,
+      "loss": 89.0863
+    },
+    {
+      "epoch": 18,
+      "loss": 108.7701
+    },
+    {
+      "epoch": 19,
+      "loss": 96.8437
+    },
+    {
+      "epoch": 20,
+      "loss": 86.9574
+    }
+  ],
+  "models": {
+    "rule_based_baseline": {
+      "name": "Rule-based Regex Heuristic Baseline",
+      "notes": "Regex matches for quantities, hardcoded units dictionary, and food keyword lookup. High precision on simple lines, but fragile on conversational pantry phrasing.",
+      "metrics": {
+        "precision": 0.8831,
+        "recall": 0.8161,
+        "f1_score": 0.8483,
+        "total_gold_entities": 620,
+        "total_predicted_entities": 573,
+        "true_positives": 506,
+        "false_positives": 67,
+        "false_negatives": 114,
+        "per_type_metrics": {
+          "FOOD_ITEM": {
+            "precision": 0.8054,
+            "recall": 0.6742,
+            "f1_score": 0.734,
+            "support": 264
+          },
+          "QUANTITY": {
+            "precision": 0.9809,
+            "recall": 0.9361,
+            "f1_score": 0.9579,
+            "support": 219
+          },
+          "UNIT": {
+            "precision": 0.8601,
+            "recall": 0.8978,
+            "f1_score": 0.8786,
+            "support": 137
+          }
+        }
+      }
+    },
+    "generic_spacy_baseline": {
+      "name": "Pre-trained Generic spaCy (en_core_web_sm)",
+      "notes": "Trained on OntoNotes 5.0 (NEWS/WEB). Important limitation: Lacks native FOOD_ITEM and UNIT entity labels; can only extract CARDINAL/QUANTITY, causing 0% recall on units and culinary vocabulary.",
+      "metrics": {
+        "precision": 0.7849,
+        "recall": 0.2177,
+        "f1_score": 0.3409,
+        "total_gold_entities": 620,
+        "total_predicted_entities": 172,
+        "true_positives": 135,
+        "false_positives": 37,
+        "false_negatives": 485,
+        "per_type_metrics": {
+          "FOOD_ITEM": {
+            "precision": 0.5,
+            "recall": 0.0038,
+            "f1_score": 0.0075,
+            "support": 264
+          },
+          "QUANTITY": {
+            "precision": 0.7882,
+            "recall": 0.6119,
+            "f1_score": 0.6889,
+            "support": 219
+          },
+          "UNIT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "support": 137
+          }
+        }
+      }
+    },
+    "custom_spacy_model": {
+      "name": "Custom Fine-tuned RasaLens spaCy NER",
+      "notes": "Fine-tuned spaCy blank English architecture with dedicated Transition-Based NER parser on culinary silver annotations.",
+      "metrics": {
+        "precision": 0.7241,
+        "recall": 0.6645,
+        "f1_score": 0.693,
+        "total_gold_entities": 620,
+        "total_predicted_entities": 569,
+        "true_positives": 412,
+        "false_positives": 157,
+        "false_negatives": 208,
+        "per_type_metrics": {
+          "FOOD_ITEM": {
+            "precision": 0.5135,
+            "recall": 0.5038,
+            "f1_score": 0.5086,
+            "support": 264
+          },
+          "QUANTITY": {
+            "precision": 0.9357,
+            "recall": 0.7306,
+            "f1_score": 0.8205,
+            "support": 219
+          },
+          "UNIT": {
+            "precision": 0.8561,
+            "recall": 0.8686,
+            "f1_score": 0.8623,
+            "support": 137
+          }
+        }
+      },
+      "model_path": "models\\spacy_ner"
+    }
+  },
+  "summary": {
+    "winner": "rule_based_baseline",
+    "custom_f1": 0.693,
+    "rule_f1": 0.8483,
+    "generic_f1": 0.3409,
+    "f1_delta_custom_vs_rules": -0.1553,
+    "f1_delta_custom_vs_generic": 0.3521
+  }
+}

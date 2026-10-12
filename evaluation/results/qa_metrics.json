@@ -1,0 +1,1766 @@
+{
+  "concept": "Question Answering & Semantic RAG Retrieval",
+  "task_description": "ID-grounded semantic recipe retrieval and QA evaluation on verified testset across 13,296 recipes",
+  "evaluation_dataset": {
+    "path": "evaluation\\data\\qa_testset.json",
+    "status": "pending manual review",
+    "total_questions": 32,
+    "answerable_questions": 26,
+    "unanswerable_questions": 6
+  },
+  "corpus_size": 19195,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "index_type": "FAISS IndexFlatIP (Cosine Similarity)",
+  "models": {
+    "semantic_faiss": {
+      "method_name": "Semantic FAISS Retrieval (all-MiniLM-L6-v2)",
+      "metrics": {
+        "mrr": 0.7468,
+        "recall_at_1": 0.6538,
+        "recall_at_3": 0.8462,
+        "recall_at_5": 0.8846,
+        "unanswerable_rejection_rate": 0.0,
+        "average_latency_ms": 23.72
+      },
+      "details": [
+        {
+          "id": "qa_01",
+          "question": "How can I bake chewy chocolate chip cookies?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01740",
+            "rec_01351"
+          ],
+          "retrieved_ids": [
+            "rec_01740",
+            "rec_03112",
+            "rec_06372",
+            "rec_06037",
+            "rec_04069"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7632,
+          "latency_ms": 24.12,
+          "grounded_answer": "Based on verified recipe [rec_01740: Chewy Chocolate Chip Cookies] (American Cuisine, Dessert):\n• Key Ingredients: butter, brown sugar, sugar, vanilla extract, milk, egg, flour, baking powder\n• Cooking Time: ~24 minutes (Vegetarian)\n• Preparation Guidance: Preheat oven to 180°C (350°F).\nPlace the butter and both the sugars in the bowl of an electric mixer and beat on low speed until just combined.\nIncrease the speed to medium and beat for 8 minutes or until pale and creamy, scraping down the sides of t...\n• Related Alternatives: 'Our Favorite Chocolate Chip Cookies' [rec_03112], 'Chocolate Chip Cookies' [rec_06372]"
+        },
+        {
+          "id": "qa_02",
+          "question": "What is a quick recipe for homemade tomatillo guacamole?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01841"
+          ],
+          "retrieved_ids": [
+            "rec_05696",
+            "rec_07199",
+            "rec_01841",
+            "rec_10741",
+            "rec_10502"
+          ],
+          "relevance_rank": 3,
+          "reciprocal_rank": 0.3333,
+          "top_similarity": 0.8008,
+          "latency_ms": 22.73,
+          "grounded_answer": "Based on verified recipe [rec_05696: Guacamole with Bacon, Grilled Ramps (or Green Onions) and Roasted Tomatillos] (Mexican Cuisine, Appetizer & Side):\n• Key Ingredients: half, green onion, vegetable oil, serrano, bacon, avocado, lime juice, cilantro\n• Cooking Time: ~18 minutes (Non-Vegetarian)\n• Preparation Guidance: Heat a gas grill to medium or light a charcoal grill and let it burn until the coals are medium-hot and covered with gray ash. Lay the halved tomatillos cut side down on a rimmed baking sheet or metal baking pan and slide onto the grill. Brush the ra...\n• Related Alternatives: 'Guacamole Taquero: Taco-Shop Guacamole' [rec_07199], '3-Ingredient Tomatillo Guacamole' [rec_01841]"
+        },
+        {
+          "id": "qa_03",
+          "question": "How do I make classic baked chicken parmesan with tomato sauce and mozzarella?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05604",
+            "rec_02586"
+          ],
+          "retrieved_ids": [
+            "rec_09775",
+            "rec_02586",
+            "rec_07958",
+            "rec_05604",
+            "rec_12475"
+          ],
+          "relevance_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_similarity": 0.7896,
+          "latency_ms": 22.71,
+          "grounded_answer": "Based on verified recipe [rec_09775: New Chicken Parmesan] (Italian Cuisine, Main Course):\n• Key Ingredients: olive oil, press, salt, tomato, oregano, red pepper flakes, chicken breast, parmesan cheese\n• Cooking Time: ~12 minutes (Non-Vegetarian)\n• Preparation Guidance: Preheat oven to 500° F. Whisk first 3 ingredients in large bowl. Place tomatoes in medium bowl; mix in 2 tablespoons garlic oil, then oregano and crushed red pepper. Add chicken to large bowl with remaining garlic oil and turn to coat.\nPlace 1 cup Pa...\n• Related Alternatives: 'Quick Baked Chicken Parmesan' [rec_02586], 'Chicken Parmesan Burgers' [rec_07958]"
+        },
+        {
+          "id": "qa_04",
+          "question": "How to make a hearty beef and sweet potato chili in an Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00961"
+          ],
+          "retrieved_ids": [
+            "rec_00961",
+            "rec_01559",
+            "rec_02288",
+            "rec_02617",
+            "rec_07286"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7706,
+          "latency_ms": 21.72,
+          "grounded_answer": "Based on verified recipe [rec_00961: Instant Pot Beef and Sweet Potato Chili] (Mexican Cuisine, Dessert):\n• Key Ingredients: red onion, bacon, ground beef, salt, smash, cumin, paprika, paste\n• Cooking Time: ~67 minutes (Non-Vegetarian)\n• Preparation Guidance: Finely chop onions. Set aside 1/2 cup for serving.\nPlace bacon in Instant Pot and cook on Sauté setting (or cook over medium-high heat in pressure cooker), stirring occasionally, until dark golden brown and most of the fat is rendered, 6–8 minutes. U...\n• Related Alternatives: 'Instant Pot Slow-Cooked Ground Beef and Cocoa Chili' [rec_01559], 'Instant-Pot Cowboy Chili' [rec_02288]"
+        },
+        {
+          "id": "qa_05",
+          "question": "What is the recipe for classic moist banana bread?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_02464",
+            "rec_03945"
+          ],
+          "retrieved_ids": [
+            "rec_02464",
+            "rec_03945",
+            "rec_11917",
+            "rec_10711",
+            "rec_15058"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7375,
+          "latency_ms": 21.14,
+          "grounded_answer": "Based on verified recipe [rec_02464: Banana Bread] (American Cuisine, Main Course):\n• Key Ingredients: grease, flour, salt, baking powder, sugar, smooth, egg, vanilla extract\n• Cooking Time: ~65 minutes (Vegetarian)\n• Preparation Guidance: Heat the oven to 350°F. Grease a 9x5-inch loaf pan with softened butter.\nWhisk together the flour, salt, baking powder, and sugar in a large bowl.\nMix together the melted butter and mashed bananas in a separate bowl. Beat in the eggs and vanilla unti...\n• Related Alternatives: 'Our Favorite Banana Bread' [rec_03945], 'Aunt Holly's Banana Bread' [rec_11917]"
+        },
+        {
+          "id": "qa_06",
+          "question": "How can I make coconut milk French toast with pineapple syrup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01328"
+          ],
+          "retrieved_ids": [
+            "rec_01328",
+            "rec_14656",
+            "rec_16402",
+            "rec_01070",
+            "rec_06396"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.8356,
+          "latency_ms": 21.36,
+          "grounded_answer": "Based on verified recipe [rec_01328: Coconut Milk French Toast with Pineapple Syrup] (Indian Cuisine, Breakfast):\n• Key Ingredients: bread, juice, coconut oil, sugar, salt, coconut milk, vanilla extract\n• Cooking Time: ~60 minutes (Vegetarian)\n• Preparation Guidance: Preheat oven to 275°F. Arrange bread on a rimmed baking sheet and toast, flipping once halfway through, until dry but not browned, 20–30 minutes. This will help the bread absorb the coconut milk without sogging out.\nWhile bread toasts, drain pineappl...\n• Related Alternatives: 'Coconut French Toast with Chocolate Chips Recipe' [rec_14656], 'Caramelized Banana French Toast Recipe' [rec_16402]"
+        },
+        {
+          "id": "qa_07",
+          "question": "How do I make a crispy grilled pizza with fresh summer zucchini and tomatoes?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01122",
+            "rec_00202"
+          ],
+          "retrieved_ids": [
+            "rec_12321",
+            "rec_01122",
+            "rec_08381",
+            "rec_10606",
+            "rec_11546"
+          ],
+          "relevance_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_similarity": 0.727,
+          "latency_ms": 20.88,
+          "grounded_answer": "Based on verified recipe [rec_12321: Grilled Zucchini Pizza] (Italian Cuisine, Main Course):\n• Key Ingredients: garlic, olive oil, dough, zucchini, salt, mozzarella, oregano\n• Cooking Time: ~22 minutes (Vegetarian)\n• Preparation Guidance: Prepare gas grill for cooking over moderate heat. Preheat burners on high, covered, 10 minutes, then, if necessary, reduce to heat specified in recipe.\nMeanwhile, mince garlic with a large heavy knife, then mash to a paste with a pinch of salt using ...\n• Related Alternatives: 'Summer Pizza with Salami, Zucchini, and Tomatoes' [rec_01122], 'Grilled Zucchini Pepper Salad' [rec_08381]"
+        },
+        {
+          "id": "qa_08",
+          "question": "What ingredients go into Caesar salad roast chicken?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00014"
+          ],
+          "retrieved_ids": [
+            "rec_00014",
+            "rec_00762",
+            "rec_05292",
+            "rec_08880",
+            "rec_00643"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.8245,
+          "latency_ms": 20.68,
+          "grounded_answer": "Based on verified recipe [rec_00014: Caesar Salad Roast Chicken] (American Cuisine, Appetizer & Side):\n• Key Ingredients: paste, garlic, mayonnaise, dijon mustard, olive oil, black pepper, leg, salt\n• Cooking Time: ~125 minutes (Non-Vegetarian)\n• Preparation Guidance: Place a rack in lower third of oven; preheat to 450°F. Whisk anchovies, garlic, 3 Tbsp. mayonnaise, 1 Tbsp. mustard, 1 Tbsp. oil, and 1½ tsp. pepper in a small bowl. Set aside 1 Tbsp. anchovy mayo in another small bowl.\nPat chicken dry; season outsid...\n• Related Alternatives: 'Deconstructed Chicken Caesar Salad' [rec_00762], 'Chopped Chicken Caesar Sammies' [rec_05292]"
+        },
+        {
+          "id": "qa_09",
+          "question": "How to make traditional American homemade apple pie?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01583"
+          ],
+          "retrieved_ids": [
+            "rec_02487",
+            "rec_17401",
+            "rec_05697",
+            "rec_17166",
+            "rec_13020"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.7889,
+          "latency_ms": 19.29,
+          "grounded_answer": "Based on verified recipe [rec_02487: Classic Apple Pie] (American Cuisine, Dessert):\n• Key Ingredients: all-purpose flour, sugar, milk, heavy cream, shell, size, lemon juice, sugar\n• Cooking Time: ~177 minutes (Vegetarian)\n• Preparation Guidance: In a small bowl, whisk together flour and sugar. Set aside.\nIn a small bowl, mix milk and cream. Chill until needed.\nPlace the apples in a medium bowl. Add the lemon juice and toss with a spatula until the apples are well coated.\nPlace the granulated...\n• Related Alternatives: 'Classic Apple Pie Recipe (Stars in the Galaxy)' [rec_17401], 'Tiny Fried Apple Pies' [rec_05697]"
+        },
+        {
+          "id": "qa_10",
+          "question": "How to cook creamy risotto with mushrooms and fresh thyme?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00332"
+          ],
+          "retrieved_ids": [
+            "rec_14118",
+            "rec_14139",
+            "rec_00332",
+            "rec_07489",
+            "rec_00882"
+          ],
+          "relevance_rank": 3,
+          "reciprocal_rank": 0.3333,
+          "top_similarity": 0.8033,
+          "latency_ms": 20.44,
+          "grounded_answer": "Based on verified recipe [rec_14118: Creamy Mushroom Risotto Recipe] (Italian Cuisine, Main Course):\n• Key Ingredients: onion, cream, salt, oregano, vegetable broth, black pepper, bell pepper, garlic\n• Cooking Time: ~50 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Creamy Mushroom Risotto recipe, in a heavy bottomed pan, add a teaspoon of butter.\nTo it add chopped onions and minced garlic.\nSalute for about 3 to 5 minutes.Add rice to it and mix.\nAdd some vegetable broth to it and bring it to ...\n• Related Alternatives: 'Creamy Mixed Vegetable Risotto Recipe' [rec_14139], 'Risotto With Mushrooms and Thyme' [rec_00332]"
+        },
+        {
+          "id": "qa_11",
+          "question": "How do I cook shrimp scampi with garlic, butter and lemon?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01439",
+            "rec_04053"
+          ],
+          "retrieved_ids": [
+            "rec_04053",
+            "rec_11825",
+            "rec_08901",
+            "rec_01439",
+            "rec_08675"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.8582,
+          "latency_ms": 19.58,
+          "grounded_answer": "Based on verified recipe [rec_04053: Shrimp Scampi] (American Cuisine, Main Course):\n• Key Ingredients: butter, devein, salt, garlic, lemon juice, parsley\n• Cooking Time: ~2 minutes (Non-Vegetarian)\n• Preparation Guidance: Heat the butter in a sauté pan over medium heat.\nAdd the shrimp and salt and sauté for 2 minutes. Add the garlic and sauté for 1 more minute, or until the shrimp are cooked through.\nSprinkle the shrimp with the lemon juice and parsley, and toss to co...\n• Related Alternatives: 'Shrimp Scampi Pasta' [rec_11825], 'Salt-Roasted Shrimp with Scampi Dip' [rec_08901]"
+        },
+        {
+          "id": "qa_12",
+          "question": "How to make butternut squash soup with pumpkin butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05942"
+          ],
+          "retrieved_ids": [
+            "rec_05942",
+            "rec_09052",
+            "rec_18166",
+            "rec_04892",
+            "rec_10071"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.8609,
+          "latency_ms": 19.83,
+          "grounded_answer": "Based on verified recipe [rec_05942: Butternut Squash Soup with Pumpkin Butter] (American Cuisine, Appetizer & Side):\n• Key Ingredients: vegetable oil, squash, chicken broth, cinnamon, marjoram, thyme, nutmeg, half\n• Cooking Time: ~45 minutes (Non-Vegetarian)\n• Preparation Guidance: Preheat the oven to 375 °F. Spray a 9 x 13-inch baking dish with the vegetable oil spray.\nPlace the squash halves, cut side down, in the prepared dish. Pierce the skin sides several times with a fork. Bake until the squash is tender, about 45 minutes...\n• Related Alternatives: 'Farmhouse Butternut Squash Soup' [rec_09052], 'Butternut Squash And Carrot Soup Recipe' [rec_18166]"
+        },
+        {
+          "id": "qa_13",
+          "question": "What is the recipe for classic bakery style blueberry muffins?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01843"
+          ],
+          "retrieved_ids": [
+            "rec_01843",
+            "rec_08479",
+            "rec_07162",
+            "rec_03638",
+            "rec_11571"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7983,
+          "latency_ms": 19.32,
+          "grounded_answer": "Based on verified recipe [rec_01843: Epi Classic Blueberry Muffins] (American Cuisine, Breakfast):\n• Key Ingredients: all-purpose flour, sugar, baking powder, salt, egg, sour cream, milk, vanilla extract\n• Cooking Time: ~33 minutes (Vegetarian)\n• Preparation Guidance: Preheat oven to 375°F. Line muffin pan with liners. Whisk flour, granulated sugar, baking powder, and salt in a large bowl.\nWhisk eggs, sour cream, milk, and vanilla in a medium bowl.\nMix egg mixture into dry ingredients, then stir in butter. Fold in...\n• Related Alternatives: 'Blueberry Muffins with Lemon Blackberry Glaze' [rec_08479], 'Blueberriest Muffins' [rec_07162]"
+        },
+        {
+          "id": "qa_14",
+          "question": "How to prepare pork carnitas in a pressure cooker or Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00441",
+            "rec_02289"
+          ],
+          "retrieved_ids": [
+            "rec_00441",
+            "rec_07207",
+            "rec_01196",
+            "rec_02289",
+            "rec_07718"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7421,
+          "latency_ms": 19.64,
+          "grounded_answer": "Based on verified recipe [rec_00441: Instant Pot Tequila Lime Carnitas] (Mexican Cuisine, Main Course):\n• Key Ingredients: roast, season, beef broth, tequila, lime juice, avocado oil, salt, cilantro\n• Cooking Time: ~75 minutes (Non-Vegetarian)\n• Preparation Guidance: Rub the pork pieces evenly with the chile-lime seasoning. Place the pork in the Instant Pot. Add the broth, tequila, and 2 tablespoons of the lime juice.\nSecure the lid on the pot and close the pressure-release valve. Set the pot to HIGH pressure for...\n• Related Alternatives: 'Carnitas: Braised and Fried Pork' [rec_07207], 'Instant Pot Bolognese' [rec_01196]"
+        },
+        {
+          "id": "qa_15",
+          "question": "How to make a quick chilled summer tomato gazpacho soup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00134"
+          ],
+          "retrieved_ids": [
+            "rec_00134",
+            "rec_09439",
+            "rec_08505",
+            "rec_08201",
+            "rec_07533"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.6837,
+          "latency_ms": 20.37,
+          "grounded_answer": "Based on verified recipe [rec_00134: Speedy Summer Gazpacho] (Italian Cuisine, Main Course):\n• Key Ingredients: cucumber, tomato, basil, celery, deseede, garlic, lemon, olive oil\n• Cooking Time: ~30 minutes (Vegan)\n• Preparation Guidance: Put all the ingredients in a food processor and blitz until smooth, then season to taste with salt and pepper.\nAdd some water to loosen the soup if needed, then divide it between bowls and drizzle some more oil on top to serve....\n• Related Alternatives: 'Late Summer Tomato Soup with Shell Beans, Squid Rings and Parsley' [rec_09439], 'Summer Tomato and Bell Pepper Soup' [rec_08505]"
+        },
+        {
+          "id": "qa_16",
+          "question": "How to make creamy homemade hummus served with spiced summer squash?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00607"
+          ],
+          "retrieved_ids": [
+            "rec_00607",
+            "rec_05453",
+            "rec_01144",
+            "rec_16182",
+            "rec_00427"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7866,
+          "latency_ms": 19.85,
+          "grounded_answer": "Based on verified recipe [rec_00607: Hummus with Spiced Summer Squash and Lamb] (Mediterranean Cuisine, Appetizer & Side):\n• Key Ingredients: chickpea, garlic, tahini, lemon juice, salt, salt, coriander, cumin\n• Cooking Time: ~17 minutes (Non-Vegetarian)\n• Preparation Guidance: Process chickpeas in a food processor until powdery clumps form, about 30 seconds. Add garlic, tahini, lemon juice, and salt and process until smooth. With motor running, drizzle in 1/2 cup water and process until hummus is very smooth, light, and cr...\n• Related Alternatives: 'Ember-Roasted Squash Hummus' [rec_05453], 'Marinated Summer Squash with Hazelnuts and Ricotta' [rec_01144]"
+        },
+        {
+          "id": "qa_17",
+          "question": "What are the steps to make traditional New England clam chowder?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05946"
+          ],
+          "retrieved_ids": [
+            "rec_05946",
+            "rec_07731",
+            "rec_05571",
+            "rec_08048",
+            "rec_03971"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7624,
+          "latency_ms": 19.66,
+          "grounded_answer": "Based on verified recipe [rec_05946: New England Clam Chowder] (American Cuisine, Main Course):\n• Key Ingredients: clams, butter, bacon, celery, onion, garlic, potato, thyme\n• Cooking Time: ~50 minutes (Non-Vegetarian)\n• Preparation Guidance: Bring clams and 4 cups water to a boil in a large pot over high heat. Cook until clams just open, 8-10 minutes (discard any that do not open). Using a large slotted spoon, transfer clams to a large rimmed baking sheet; set broth aside. Let clams cool...\n• Related Alternatives: 'Classic Manhattan Clam Chowder' [rec_07731], 'Manhattan Clam Chowder' [rec_05571]"
+        },
+        {
+          "id": "qa_18",
+          "question": "How to prepare a smooth and decadent dark chocolate mousse?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03509",
+            "rec_01347"
+          ],
+          "retrieved_ids": [
+            "rec_13547",
+            "rec_09987",
+            "rec_05729",
+            "rec_03509",
+            "rec_08296"
+          ],
+          "relevance_rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_similarity": 0.7802,
+          "latency_ms": 19.57,
+          "grounded_answer": "Based on verified recipe [rec_13547: Rich Dark Chocolate Mousse Recipe] (American Cuisine, Dessert):\n• Key Ingredients: vanilla, sugar, chocolate, water, egg yolk, egg white\n• Cooking Time: ~50 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Rich Dark Chocolate Mousse Recipe, we will first melt the chocolate.\nFor this, heat about 1 inch of water in a large pan till it boils.\nReduce the heat to low and maintain the temperature.\nWe will use this skillet water for double...\n• Related Alternatives: 'The Easiest Chocolate Mousse Ever' [rec_09987], 'Classic Chocolate Mousse' [rec_05729]"
+        },
+        {
+          "id": "qa_19",
+          "question": "How to make crispy Baja style fish tacos with shredded cabbage and lime?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03497",
+            "rec_01963"
+          ],
+          "retrieved_ids": [
+            "rec_14874",
+            "rec_09851",
+            "rec_06852",
+            "rec_03916",
+            "rec_03837"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.763,
+          "latency_ms": 19.57,
+          "grounded_answer": "Based on verified recipe [rec_14874: Crunchy Fish Tacos - Perfect Mexican Appetizer] (Mexican Cuisine, Appetizer & Side):\n• Key Ingredients: wash, carrot, salt, all-purpose flour, salt, flour, black pepper, egg\n• Cooking Time: ~45 minutes (Non-Vegetarian)\n• Preparation Guidance: To begin making the Crunchy Fish Tacos Recipe, we will first make the crispy fish.\nTo make the Crunchy Fish In a mixing bowl, combine salt, black pepper, egg, all purpose flour, rice flour and corn flour.\nWhisk the batter until well combined.\nHeat oi...\n• Related Alternatives: 'Grilled Fish Tacos' [rec_09851], 'Fish Tacos with Strawberry Salsa' [rec_06852]"
+        },
+        {
+          "id": "qa_20",
+          "question": "How to make slow cooker or crock pot beef stew with potatoes and carrots?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_04054"
+          ],
+          "retrieved_ids": [
+            "rec_04054",
+            "rec_10946",
+            "rec_04815",
+            "rec_03779",
+            "rec_10943"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.718,
+          "latency_ms": 36.74,
+          "grounded_answer": "Based on verified recipe [rec_04054: Beef Stew in the Crock Pot] (Mediterranean Cuisine, Main Course):\n• Key Ingredients: meat, flour, olive oil, wine, beef broth, bay leaf, thyme, potato\n• Cooking Time: ~94 minutes (Non-Vegetarian)\n• Preparation Guidance: Place the cubed meat and flour and in Ziploc bag, seal and shake until the pieces are fully coated with flour.\nHeat 2 tbsp of olive oil in a large sauté pan over medium high heat and sear the pieces of meat for 4 minutes until all sides are nicely br...\n• Related Alternatives: 'Potato, Cheddar, and Chive Soup' [rec_10946], 'Irish Channel Corned Beef and Cabbage' [rec_04815]"
+        },
+        {
+          "id": "qa_21",
+          "question": "How to roast Brussels sprouts with a sweet honey glaze?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00774"
+          ],
+          "retrieved_ids": [
+            "rec_00774",
+            "rec_05209",
+            "rec_10421",
+            "rec_04038",
+            "rec_00477"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.8469,
+          "latency_ms": 43.28,
+          "grounded_answer": "Based on verified recipe [rec_00774: Roasted Brussels Sprouts with Warm Honey Glaze] (Asian Cuisine, Main Course):\n• Key Ingredients: sprout, olive oil, salt, black pepper, honey, red wine vinegar, red pepper flakes, butter\n• Cooking Time: ~32 minutes (Vegetarian)\n• Preparation Guidance: Place a rack in bottom third of oven and set a rimmed baking sheet on top; preheat oven to 450°F. Toss brussels sprouts and oil in a large bowl; season with salt and black pepper.\nCarefully remove baking sheet from oven. Using tongs, arrange brussels...\n• Related Alternatives: 'Roasted Brussels Sprout and Apple Salad' [rec_05209], 'Roasted Brussels Sprouts' [rec_10421]"
+        },
+        {
+          "id": "qa_22",
+          "question": "What is the recipe for classic oven baked beef lasagna with ricotta?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01544"
+          ],
+          "retrieved_ids": [
+            "rec_04847",
+            "rec_07351",
+            "rec_02970",
+            "rec_11766",
+            "rec_02273"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.7384,
+          "latency_ms": 56.01,
+          "grounded_answer": "Based on verified recipe [rec_04847: Tuscan Lasagna] (Italian Cuisine, Main Course):\n• Key Ingredients: ground beef, mushroom, onion, garlic, parsley, salt, basil, season\n• Cooking Time: ~62 minutes (Non-Vegetarian)\n• Preparation Guidance: Heat oven to 375°F. In a large pan over medium heat, cook beef, mushrooms, onion, garlic, parsley, salt, basil, Italian seasoning, fennel seeds and pepper until beef is browned, 12 minutes; transfer to a bowl and stir in ricotta. Cook noodles as dire...\n• Related Alternatives: 'Swiss Chard Lasagna with Ricotta and Mushroom' [rec_07351], 'Microwave Lasagna With Spinach, Mushrooms, and Three Cheeses' [rec_02970]"
+        },
+        {
+          "id": "qa_23",
+          "question": "How to make rich cheddar potato soup with crispy bacon topping?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00586"
+          ],
+          "retrieved_ids": [
+            "rec_00586",
+            "rec_09873",
+            "rec_06374",
+            "rec_06160",
+            "rec_12826"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7705,
+          "latency_ms": 20.9,
+          "grounded_answer": "Based on verified recipe [rec_00586: Cheddar Potato Soup with Bacon] (American Cuisine, Appetizer & Side):\n• Key Ingredients: bacon, onion, potato, all-purpose flour, water, chicken broth, wine, cheddar\n• Cooking Time: ~6 minutes (Non-Vegetarian)\n• Preparation Guidance: Chop bacon and in a large heavy saucepan cook over moderate heat, stirring occasionally, until crisp. Transfer bacon with a slotted spoon to paper towels to drain, reserving fat in pan.\nWhile bacon is cooking, chop onion. Peel potatoes and cut into 1...\n• Related Alternatives: 'Potato-Bacon Hash' [rec_09873], 'Cheesy Corn Chowder' [rec_06374]"
+        },
+        {
+          "id": "qa_24",
+          "question": "How to prepare the simplest holiday whole roast turkey?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01004",
+            "rec_00935"
+          ],
+          "retrieved_ids": [
+            "rec_02440",
+            "rec_01004",
+            "rec_11262",
+            "rec_05952",
+            "rec_08127"
+          ],
+          "relevance_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_similarity": 0.7824,
+          "latency_ms": 21.05,
+          "grounded_answer": "Based on verified recipe [rec_02440: Easy Roast Turkey With No-Roux Gravy] (Indian Cuisine, Main Course):\n• Key Ingredients: brown sugar, coriander seeds, black pepper, salt, pat, butter, wing, unpeele\n• Cooking Time: ~170 minutes (Non-Vegetarian)\n• Preparation Guidance: Mix brown sugar, spices, pepper, and 3 Tbsp. or 4 1/2 tsp. salt in a small bowl to combine; sprinkle all over surface and inside cavity of turkey. Place turkey on a V-shape roasting rack set inside a large roasting pan (if using a disposable pan, pla...\n• Related Alternatives: 'The Simplest Roast Turkey' [rec_01004], 'Simple Roast Turkey with Rich Turkey Gravy' [rec_11262]"
+        },
+        {
+          "id": "qa_25",
+          "question": "How do I bake tender sweet cornbread muffins with whipped corn butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00179"
+          ],
+          "retrieved_ids": [
+            "rec_00179",
+            "rec_17378",
+            "rec_10885",
+            "rec_09264",
+            "rec_08113"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.716,
+          "latency_ms": 27.07,
+          "grounded_answer": "Based on verified recipe [rec_00179: Cornbread Muffins With Whipped Sweet Corn] (American Cuisine, Dessert):\n• Key Ingredients: coconut oil, date, water, cornmeal, flour, sugar, baking powder, salt\n• Cooking Time: ~36 minutes (Vegetarian)\n• Preparation Guidance: Make the muffins: Preheat the oven to 400°F. Generously coat nine wells of a standard muffin tin with coconut oil.\nPut the dates in a small heatproof bowl and cover with boiling water. Let soak for about 5 minutes. Drain the dates, reserving the soak...\n• Related Alternatives: 'Fluffy Corn Muffins Recipe' [rec_17378], 'Cornbread Muffins with Maple Butter' [rec_10885]"
+        },
+        {
+          "id": "qa_26",
+          "question": "How to prepare Thai rice noodles with chili oil and pomodoro sauce?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01088"
+          ],
+          "retrieved_ids": [
+            "rec_01088",
+            "rec_03450",
+            "rec_06508",
+            "rec_10670",
+            "rec_11370"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.7531,
+          "latency_ms": 27.27,
+          "grounded_answer": "Based on verified recipe [rec_01088: Rice Noodles al Pomodoro with Chili Oil] (Asian Cuisine, Main Course):\n• Key Ingredients: salt, noodle, olive oil, garlic, red, basil, tomato, sesame seed\n• Cooking Time: ~18 minutes (Vegan)\n• Preparation Guidance: Bring a large saucepan of salted water to a boil. Remove from heat; add noodles. Let sit, stirring occasionally, until al dente, about 4 minutes (time may vary by brand). Drain and rinse under cold running water.\nMeanwhile, heat olive oil in a large ...\n• Related Alternatives: '22-Minute Pad Thai' [rec_03450], 'Pad Thai' [rec_06508]"
+        },
+        {
+          "id": "qa_27",
+          "question": "How do I make authentic South Indian fermented idli and medu vada with coconut chutney?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_17728",
+            "rec_18349",
+            "rec_13690",
+            "rec_09325",
+            "rec_15174"
+          ],
+          "top_similarity": 0.6966,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 22.31,
+          "grounded_answer": "Based on verified recipe [rec_17728: South Indian Coconut Chutney Recipe With Coconut Water] (Indian Cuisine, Appetizer & Side):\n• Key Ingredients: coconut, mustard seed, green chili, red chili, oil, coconut oil, urad dal, water\n• Cooking Time: ~20 minutes (Vegan)\n• Preparation Guidance: To begin making South Indian Coconut Chutney Recipe With Coconut Water, in a blender, take all the ingredients mentioned under to make chutney.\nBlend it with coconut water, until you get a semi-smooth paste like chutney.\nTraditionally, this is kept c...\n• Related Alternatives: 'Tamil Nadu Style Coconut Chutney Recipe - For Idli And Dosa' [rec_18349], 'Coriander and Coconut Chutney Recipe - Green Coriander And Coconut Chutney (Recipe (In Hindi)' [rec_13690]"
+        },
+        {
+          "id": "qa_28",
+          "question": "What is the recipe for Japanese takoyaki octopus balls with bonito flakes and kewpie mayo?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_09744",
+            "rec_07419",
+            "rec_00413",
+            "rec_09603",
+            "rec_03480"
+          ],
+          "top_similarity": 0.6119,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 21.63,
+          "grounded_answer": "Based on verified recipe [rec_09744: Egg Foo Yung] (Asian Cuisine, Main Course):\n• Key Ingredients: chicken broth, sauce, ketchup, soy sauce, white vinegar, cornstarch, green onion, egg\n• Cooking Time: ~10 minutes (Non-Vegetarian)\n• Preparation Guidance: Whisk together broth, oyster sauce, ketchup, soy sauce, vinegar, cornstarch, and a pinch of salt in a small heavy saucepan. Bring to a simmer, whisking occasionally, and simmer 2 minutes. Remove from heat.\nChop scallions, separating white parts and g...\n• Related Alternatives: 'Charred Octopus with Peach, Arugula and Aged Balsamic' [rec_07419], 'Okonomiyaki (“As You Like It”) Pancakes With Bonito Flakes' [rec_00413]"
+        },
+        {
+          "id": "qa_29",
+          "question": "How to cook traditional Kashmiri mutton rogan josh with whole spices and ratan jot?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_16579",
+            "rec_19104",
+            "rec_18471",
+            "rec_15774",
+            "rec_19027"
+          ],
+          "top_similarity": 0.82,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 23.51,
+          "grounded_answer": "Based on verified recipe [rec_16579: Kashmiri Rogan Josh Recipe - Mutton in Red Curry] (Indian Cuisine, Main Course):\n• Key Ingredients: require, curd, chili powder, cinnamon, mustard oil, fennel, black pepper, jot\n• Cooking Time: ~130 minutes (Non-Vegetarian)\n• Preparation Guidance: To begin making the Kashmiri Rogan Josh recipe, wash mutton nicely and drain water completely.Marinade the mutton with mentioned ingredients under Marination for approximately for 1 and 1-1/2 hours.\nCling wrap the bowl and refrigerate it for better r...\n• Related Alternatives: 'Kashmiri Mutton Yakhni Recipe' [rec_19104], 'Kashmiri Style Al Rogan Josh Recipe- Pumpkin In Red Curry' [rec_18471]"
+        },
+        {
+          "id": "qa_30",
+          "question": "How to make Ethiopian doro wat chicken stew with injera sourdough flatbread?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_08623",
+            "rec_08836",
+            "rec_18583",
+            "rec_01266",
+            "rec_02443"
+          ],
+          "top_similarity": 0.6298,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 22.07,
+          "grounded_answer": "Based on verified recipe [rec_08623: Chicken Stew (Doro Wett)] (Indian Cuisine, Main Course):\n• Key Ingredients: red onion, salt, butter, preferably, black pepper, garlic, ginger, chili powder\n• Cooking Time: ~75 minutes (Non-Vegetarian)\n• Preparation Guidance: Combine the onions, a pinch of salt, and half of the spiced butter in a Dutch oven or other large deep pot over low heat. Cook, stirring occasionally, until the onions are golden, about 15 minutes. Add the remaining butter, the cardamom, black pepper...\n• Related Alternatives: 'Algerian Flatbread' [rec_08836], 'Besan & Atta Ki Roti Recipe (Chickpea Flatbread)' [rec_18583]"
+        },
+        {
+          "id": "qa_31",
+          "question": "What is the traditional Nigerian jollof rice recipe cooked with smoked turkey and fried plantains?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_08498",
+            "rec_07824",
+            "rec_12254",
+            "rec_02417",
+            "rec_03111"
+          ],
+          "top_similarity": 0.6668,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 23.0,
+          "grounded_answer": "Based on verified recipe [rec_08498: Fried Rice] (Asian Cuisine, Main Course):\n• Key Ingredients: canola oil, egg, green onion, beef, carrot, rice, soy sauce, pepper\n• Cooking Time: ~9 minutes (Non-Vegetarian)\n• Preparation Guidance: 1. In a large skillet or wok, heat 1 tablespoon of the oil over medium-high heat.\n2. Add the eggs and scallions. Cook, breaking up the eggs with a spoon until they are lightly browned.\n3. Stir in the meat, vegetables, rice, and the remaining oil. Inc...\n• Related Alternatives: 'Simple Fried Rice' [rec_07824], 'Egg Fried Rice' [rec_12254]"
+        },
+        {
+          "id": "qa_32",
+          "question": "How to make authentic Vietnamese Pho Bo 24-hour beef bone broth with star anise and rice noodles?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_11694",
+            "rec_09039",
+            "rec_12586",
+            "rec_02529",
+            "rec_02051"
+          ],
+          "top_similarity": 0.782,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 21.59,
+          "grounded_answer": "Based on verified recipe [rec_11694: Vietnamese \"Pho\" Rice Noodle Soup with Beef] (Asian Cuisine, Appetizer & Side):\n• Key Ingredients: bone, chuck, char, yellow onion, fish sauce, sugar, pan, pan\n• Cooking Time: ~180 minutes (Non-Vegetarian)\n• Preparation Guidance: 1. In a large stockpot, bring 6 quarts water to a boil. Place the bones and beef chuck in a second pot and add water to cover. Bring to a boil and boil vigorously for 5 minutes. Using tongs, carefully transfer the bones and beef to the first pot of b...\n• Related Alternatives: 'Southeast Asian Beef and Rice-Noodle Soup' [rec_09039], 'Taiwanese Beef Noodle Soup' [rec_12586]"
+        }
+      ]
+    },
+    "tfidf_baseline": {
+      "method_name": "TF-IDF Sparse Keyword Baseline",
+      "metrics": {
+        "mrr": 0.2923,
+        "recall_at_1": 0.1923,
+        "recall_at_3": 0.3462,
+        "recall_at_5": 0.5385,
+        "unanswerable_rejection_rate": 0.8333,
+        "average_latency_ms": 25.61
+      },
+      "details": [
+        {
+          "id": "qa_01",
+          "question": "How can I bake chewy chocolate chip cookies?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01740",
+            "rec_01351"
+          ],
+          "retrieved_ids": [
+            "rec_15003",
+            "rec_16007",
+            "rec_04070",
+            "rec_14638",
+            "rec_01740"
+          ],
+          "relevance_rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_similarity": 0.4651,
+          "latency_ms": 32.83,
+          "grounded_answer": "Based on verified recipe [rec_15003: Chocolate Chip Cookies With Coconut Recipe] (American Cuisine, Dessert):\n• Key Ingredients: salt, baking powder, chocolate chips, vanilla extract, brown sugar, butter, baking soda, all-purpose flour\n• Cooking Time: ~45 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Chocolate Chip Cookies With Coconut, preheat the oven at 180 degree.In a mixing bowl, add soft butter, brown sugar and white sugar all together with electric mixer or standing mixture.Beat eggs in the same mixture one by one and a...\n• Related Alternatives: 'Muesli Ragi Chocolate Chip Cookies Recipe' [rec_16007], 'Banana Oatmeal Chocolate Chip Cookies' [rec_04070]"
+        },
+        {
+          "id": "qa_02",
+          "question": "What is a quick recipe for homemade tomatillo guacamole?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01841"
+          ],
+          "retrieved_ids": [
+            "rec_14877",
+            "rec_15507",
+            "rec_10741",
+            "rec_13913",
+            "rec_01841"
+          ],
+          "relevance_rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_similarity": 0.2944,
+          "latency_ms": 32.71,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_03",
+          "question": "How do I make classic baked chicken parmesan with tomato sauce and mozzarella?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05604",
+            "rec_02586"
+          ],
+          "retrieved_ids": [
+            "rec_15096",
+            "rec_18338",
+            "rec_16140",
+            "rec_14655",
+            "rec_03485"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2928,
+          "latency_ms": 31.1,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_04",
+          "question": "How to make a hearty beef and sweet potato chili in an Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00961"
+          ],
+          "retrieved_ids": [
+            "rec_00961",
+            "rec_02297",
+            "rec_15228",
+            "rec_01376",
+            "rec_00840"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.5381,
+          "latency_ms": 27.19,
+          "grounded_answer": "Based on verified recipe [rec_00961: Instant Pot Beef and Sweet Potato Chili] (Mexican Cuisine, Dessert):\n• Key Ingredients: red onion, bacon, ground beef, salt, smash, cumin, paprika, paste\n• Cooking Time: ~67 minutes (Non-Vegetarian)\n• Preparation Guidance: Finely chop onions. Set aside 1/2 cup for serving.\nPlace bacon in Instant Pot and cook on Sauté setting (or cook over medium-high heat in pressure cooker), stirring occasionally, until dark golden brown and most of the fat is rendered, 6–8 minutes. U...\n• Related Alternatives: 'Instant-Pot Vegan Cauliflower Queso' [rec_02297], 'Sweet Potato Flatbread Recipe - Sweet Potato Chapati' [rec_15228]"
+        },
+        {
+          "id": "qa_05",
+          "question": "What is the recipe for classic moist banana bread?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_02464",
+            "rec_03945"
+          ],
+          "retrieved_ids": [
+            "rec_15211",
+            "rec_15134",
+            "rec_17910",
+            "rec_11390",
+            "rec_06983"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2992,
+          "latency_ms": 26.51,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.30 < 0.42)."
+        },
+        {
+          "id": "qa_06",
+          "question": "How can I make coconut milk French toast with pineapple syrup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01328"
+          ],
+          "retrieved_ids": [
+            "rec_01328",
+            "rec_18933",
+            "rec_16402",
+            "rec_14656",
+            "rec_18363"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.5145,
+          "latency_ms": 24.27,
+          "grounded_answer": "Based on verified recipe [rec_01328: Coconut Milk French Toast with Pineapple Syrup] (Indian Cuisine, Breakfast):\n• Key Ingredients: bread, juice, coconut oil, sugar, salt, coconut milk, vanilla extract\n• Cooking Time: ~60 minutes (Vegetarian)\n• Preparation Guidance: Preheat oven to 275°F. Arrange bread on a rimmed baking sheet and toast, flipping once halfway through, until dry but not browned, 20–30 minutes. This will help the bread absorb the coconut milk without sogging out.\nWhile bread toasts, drain pineappl...\n• Related Alternatives: 'Overnight Pumpkin French Toast Baked Casserole Recipe' [rec_18933], 'Caramelized Banana French Toast Recipe' [rec_16402]"
+        },
+        {
+          "id": "qa_07",
+          "question": "How do I make a crispy grilled pizza with fresh summer zucchini and tomatoes?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01122",
+            "rec_00202"
+          ],
+          "retrieved_ids": [
+            "rec_13368",
+            "rec_15933",
+            "rec_02689",
+            "rec_18967",
+            "rec_14384"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2913,
+          "latency_ms": 26.3,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_08",
+          "question": "What ingredients go into Caesar salad roast chicken?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00014"
+          ],
+          "retrieved_ids": [
+            "rec_17664",
+            "rec_02105",
+            "rec_00014",
+            "rec_09155",
+            "rec_00762"
+          ],
+          "relevance_rank": 3,
+          "reciprocal_rank": 0.3333,
+          "top_similarity": 0.4065,
+          "latency_ms": 23.65,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.41 < 0.42)."
+        },
+        {
+          "id": "qa_09",
+          "question": "How to make traditional American homemade apple pie?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01583"
+          ],
+          "retrieved_ids": [
+            "rec_17166",
+            "rec_17401",
+            "rec_17297",
+            "rec_15668",
+            "rec_00397"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.4471,
+          "latency_ms": 23.5,
+          "grounded_answer": "Based on verified recipe [rec_17166: Homemade Apple Pie Recipe With Whole Wheat Pie Crust] (American Cuisine, Dessert):\n• Key Ingredients: juice, sugar, brown sugar, all-purpose flour, apple, cinnamon, sugar, ice\n• Cooking Time: ~70 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Homemade Apple Pie Recipe, We will first make the apple filling.For the Filling:In a large bowl, add the sliced apples brown sugar, white sugar, salt, cinnamon powder and flour.\nMix all the ingredients until the apples are well co...\n• Related Alternatives: 'Classic Apple Pie Recipe (Stars in the Galaxy)' [rec_17401], 'Apple Pie Ice Cream Recipe' [rec_17297]"
+        },
+        {
+          "id": "qa_10",
+          "question": "How to cook creamy risotto with mushrooms and fresh thyme?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00332"
+          ],
+          "retrieved_ids": [
+            "rec_09616",
+            "rec_15226",
+            "rec_14118",
+            "rec_05240",
+            "rec_15851"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.306,
+          "latency_ms": 24.11,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.31 < 0.42)."
+        },
+        {
+          "id": "qa_11",
+          "question": "How do I cook shrimp scampi with garlic, butter and lemon?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01439",
+            "rec_04053"
+          ],
+          "retrieved_ids": [
+            "rec_06423",
+            "rec_08901",
+            "rec_11646",
+            "rec_06744",
+            "rec_00746"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2914,
+          "latency_ms": 25.75,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_12",
+          "question": "How to make butternut squash soup with pumpkin butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05942"
+          ],
+          "retrieved_ids": [
+            "rec_18166",
+            "rec_11304",
+            "rec_04349",
+            "rec_05942",
+            "rec_00975"
+          ],
+          "relevance_rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_similarity": 0.58,
+          "latency_ms": 27.25,
+          "grounded_answer": "Based on verified recipe [rec_18166: Butternut Squash And Carrot Soup Recipe] (American Cuisine, Appetizer & Side):\n• Key Ingredients: carrot, celery, olive oil, cream, coriander, vegetable broth, salt, onion\n• Cooking Time: ~70 minutes (Vegetarian)\n• Preparation Guidance: To begin with the Butternut Squash And Carrot Soup we first heat preheat the oven for 10 minutes.Place the butternut squash topped with coriander, basil, and butter in the baking sheet and roast it for 45 minutes till they become soft and tender.Heat...\n• Related Alternatives: 'Gnocchi with Mushrooms and Butternut Squash' [rec_11304], 'Butternut Squash Lasagna Rolls' [rec_04349]"
+        },
+        {
+          "id": "qa_13",
+          "question": "What is the recipe for classic bakery style blueberry muffins?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01843"
+          ],
+          "retrieved_ids": [
+            "rec_18754",
+            "rec_17567",
+            "rec_08479",
+            "rec_17164",
+            "rec_01843"
+          ],
+          "relevance_rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_similarity": 0.2668,
+          "latency_ms": 25.22,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.27 < 0.42)."
+        },
+        {
+          "id": "qa_14",
+          "question": "How to prepare pork carnitas in a pressure cooker or Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00441",
+            "rec_02289"
+          ],
+          "retrieved_ids": [
+            "rec_02297",
+            "rec_00840",
+            "rec_00441",
+            "rec_02283",
+            "rec_00684"
+          ],
+          "relevance_rank": 3,
+          "reciprocal_rank": 0.3333,
+          "top_similarity": 0.492,
+          "latency_ms": 24.92,
+          "grounded_answer": "Based on verified recipe [rec_02297: Instant-Pot Vegan Cauliflower Queso] (Mexican Cuisine, Main Course):\n• Key Ingredients: floret, water, coin, cashew, yeast, tomato, paprika, salt\n• Cooking Time: ~5 minutes (Vegan)\n• Preparation Guidance: For the Instant Pot, add the cauliflower, water, carrots and cashews to your Instant Pot and cook on high pressure for 5 minutes, then carefully do a quick pressure release by moving the valve to release the pressure.\nPour the cooked mixture into a s...\n• Related Alternatives: 'Instant Pot Braised Lamb with White Beans and Spinach' [rec_00840], 'Instant Pot Tequila Lime Carnitas' [rec_00441]"
+        },
+        {
+          "id": "qa_15",
+          "question": "How to make a quick chilled summer tomato gazpacho soup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00134"
+          ],
+          "retrieved_ids": [
+            "rec_04462",
+            "rec_14123",
+            "rec_08505",
+            "rec_00134",
+            "rec_14454"
+          ],
+          "relevance_rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_similarity": 0.2955,
+          "latency_ms": 24.24,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.30 < 0.42)."
+        },
+        {
+          "id": "qa_16",
+          "question": "How to make creamy homemade hummus served with spiced summer squash?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00607"
+          ],
+          "retrieved_ids": [
+            "rec_16353",
+            "rec_07025",
+            "rec_00607",
+            "rec_01027",
+            "rec_05453"
+          ],
+          "relevance_rank": 3,
+          "reciprocal_rank": 0.3333,
+          "top_similarity": 0.3972,
+          "latency_ms": 24.79,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.40 < 0.42)."
+        },
+        {
+          "id": "qa_17",
+          "question": "What are the steps to make traditional New England clam chowder?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05946"
+          ],
+          "retrieved_ids": [
+            "rec_10573",
+            "rec_08048",
+            "rec_08442",
+            "rec_05571",
+            "rec_17672"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2176,
+          "latency_ms": 24.46,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.22 < 0.42)."
+        },
+        {
+          "id": "qa_18",
+          "question": "How to prepare a smooth and decadent dark chocolate mousse?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03509",
+            "rec_01347"
+          ],
+          "retrieved_ids": [
+            "rec_13547",
+            "rec_15237",
+            "rec_04240",
+            "rec_15591",
+            "rec_04746"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.5867,
+          "latency_ms": 27.34,
+          "grounded_answer": "Based on verified recipe [rec_13547: Rich Dark Chocolate Mousse Recipe] (American Cuisine, Dessert):\n• Key Ingredients: vanilla, sugar, chocolate, water, egg yolk, egg white\n• Cooking Time: ~50 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Rich Dark Chocolate Mousse Recipe, we will first melt the chocolate.\nFor this, heat about 1 inch of water in a large pan till it boils.\nReduce the heat to low and maintain the temperature.\nWe will use this skillet water for double...\n• Related Alternatives: 'Eggless Dark Chocolate Cookies With Almonds Recipe' [rec_15237], 'Mummy Sandwich Cookies with White and Dark Chocolate' [rec_04240]"
+        },
+        {
+          "id": "qa_19",
+          "question": "How to make crispy Baja style fish tacos with shredded cabbage and lime?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03497",
+            "rec_01963"
+          ],
+          "retrieved_ids": [
+            "rec_18227",
+            "rec_13644",
+            "rec_14874",
+            "rec_15609",
+            "rec_13897"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.4,
+          "latency_ms": 23.76,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.40 < 0.42)."
+        },
+        {
+          "id": "qa_20",
+          "question": "How to make slow cooker or crock pot beef stew with potatoes and carrots?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_04054"
+          ],
+          "retrieved_ids": [
+            "rec_01390",
+            "rec_03868",
+            "rec_02232",
+            "rec_02703",
+            "rec_03779"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.4901,
+          "latency_ms": 24.7,
+          "grounded_answer": "Based on verified recipe [rec_01390: Slow Cooker Miso-Butter Roast Chicken and Potatoes] (Asian Cuisine, Main Course):\n• Key Ingredients: butter, paste, potato, chicken, honey, top, lemon, cooker\n• Cooking Time: ~118 minutes (Non-Vegetarian)\n• Preparation Guidance: Preheat an empty 5- to 8-quart slow cooker on HIGH for 10 to 15 minutes while you’re getting everything ready. Combine the butter and 1/2 cup of the miso in a medium bowl and mash them together to make a uniform mixture. Put the potatoes into the bot...\n• Related Alternatives: 'Slow Cooker Bone Broth' [rec_03868], 'Slow-Cooker Green Chicken Chili' [rec_02232]"
+        },
+        {
+          "id": "qa_21",
+          "question": "How to roast Brussels sprouts with a sweet honey glaze?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00774"
+          ],
+          "retrieved_ids": [
+            "rec_00774",
+            "rec_14898",
+            "rec_00477",
+            "rec_07733",
+            "rec_12043"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.5664,
+          "latency_ms": 24.53,
+          "grounded_answer": "Based on verified recipe [rec_00774: Roasted Brussels Sprouts with Warm Honey Glaze] (Asian Cuisine, Main Course):\n• Key Ingredients: sprout, olive oil, salt, black pepper, honey, red wine vinegar, red pepper flakes, butter\n• Cooking Time: ~32 minutes (Vegetarian)\n• Preparation Guidance: Place a rack in bottom third of oven and set a rimmed baking sheet on top; preheat oven to 450°F. Toss brussels sprouts and oil in a large bowl; season with salt and black pepper.\nCarefully remove baking sheet from oven. Using tongs, arrange brussels...\n• Related Alternatives: 'Pan Fried Brussel Sprouts Recipe' [rec_14898], 'Brussels Sprouts With Pistachios and Lime' [rec_00477]"
+        },
+        {
+          "id": "qa_22",
+          "question": "What is the recipe for classic oven baked beef lasagna with ricotta?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01544"
+          ],
+          "retrieved_ids": [
+            "rec_02970",
+            "rec_02488",
+            "rec_05582",
+            "rec_04847",
+            "rec_13652"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.2882,
+          "latency_ms": 24.41,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_23",
+          "question": "How to make rich cheddar potato soup with crispy bacon topping?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00586"
+          ],
+          "retrieved_ids": [
+            "rec_00586",
+            "rec_09654",
+            "rec_18843",
+            "rec_03289",
+            "rec_04761"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.287,
+          "latency_ms": 23.78,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.29 < 0.42)."
+        },
+        {
+          "id": "qa_24",
+          "question": "How to prepare the simplest holiday whole roast turkey?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01004",
+            "rec_00935"
+          ],
+          "retrieved_ids": [
+            "rec_05136",
+            "rec_01004",
+            "rec_09496",
+            "rec_03402",
+            "rec_11262"
+          ],
+          "relevance_rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_similarity": 0.4876,
+          "latency_ms": 26.0,
+          "grounded_answer": "Based on verified recipe [rec_05136: Turkey Enchiladas] (Mexican Cuisine, Main Course):\n• Key Ingredients: tomato, onion, seed, seed, separate, celery, carrot, coriander seeds\n• Cooking Time: ~60 minutes (Non-Vegetarian)\n• Preparation Guidance: In a large bowl, combine the tomatoes, onions, ancho and arbol chiles, garlic, celery, carrots, coriander, cumin, and dill and stir to combine. Season with salt and pepper then transfer to the roasting pan you will roast the turkey in.\nRoast the turk...\n• Related Alternatives: 'The Simplest Roast Turkey' [rec_01004], 'Salted Roast Turkey with Herbs and Shallot-Dijon Gravy' [rec_09496]"
+        },
+        {
+          "id": "qa_25",
+          "question": "How do I bake tender sweet cornbread muffins with whipped corn butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00179"
+          ],
+          "retrieved_ids": [
+            "rec_00179",
+            "rec_00966",
+            "rec_00472",
+            "rec_03259",
+            "rec_08221"
+          ],
+          "relevance_rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_similarity": 0.3312,
+          "latency_ms": 25.03,
+          "grounded_answer": "This culinary query cannot be answered with high confidence from the recipe knowledge base (top match confidence 0.33 < 0.42)."
+        },
+        {
+          "id": "qa_26",
+          "question": "How to prepare Thai rice noodles with chili oil and pomodoro sauce?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01088"
+          ],
+          "retrieved_ids": [
+            "rec_15797",
+            "rec_17598",
+            "rec_03919",
+            "rec_18124",
+            "rec_15016"
+          ],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.476,
+          "latency_ms": 25.0,
+          "grounded_answer": "Based on verified recipe [rec_15797: Bangkok Coconut Curry Noodle Bowl Recipe] (Asian Cuisine, Main Course):\n• Key Ingredients: red chili, oil, round, turmeric, coriander seeds, chilli, onion, jaggery\n• Cooking Time: ~50 minutes (Vegetarian)\n• Preparation Guidance: To begin making the Bangkok Coconut Curry Noodle Bowl Recipe, prepare all the ingredients and keep them ready.For cooking the rice noodles, soak the rice noodles in boiling hot water for about 10 to 15 minutes as per instructions in the packet.\nOnce ...\n• Related Alternatives: 'Chicken Pad Thai Noodles Recipe' [rec_17598], 'Mediterranean Rice Noodles' [rec_03919]"
+        },
+        {
+          "id": "qa_27",
+          "question": "How do I make authentic South Indian fermented idli and medu vada with coconut chutney?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_17728",
+            "rec_13311",
+            "rec_17225",
+            "rec_16455",
+            "rec_18687"
+          ],
+          "top_similarity": 0.433,
+          "correctly_flagged_unanswerable": false,
+          "latency_ms": 24.38,
+          "grounded_answer": "Based on verified recipe [rec_17728: South Indian Coconut Chutney Recipe With Coconut Water] (Indian Cuisine, Appetizer & Side):\n• Key Ingredients: coconut, mustard seed, green chili, red chili, oil, coconut oil, urad dal, water\n• Cooking Time: ~20 minutes (Vegan)\n• Preparation Guidance: To begin making South Indian Coconut Chutney Recipe With Coconut Water, in a blender, take all the ingredients mentioned under to make chutney.\nBlend it with coconut water, until you get a semi-smooth paste like chutney.\nTraditionally, this is kept c...\n• Related Alternatives: 'South Indian Onion Chutney Recipe - South Indian Onion Chutney (Recipe)' [rec_13311], 'Medu Vada Recipe (Traditional Fried Urad Dal Vada Using Vada Maker)' [rec_17225]"
+        },
+        {
+          "id": "qa_28",
+          "question": "What is the recipe for Japanese takoyaki octopus balls with bonito flakes and kewpie mayo?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_09909",
+            "rec_06930",
+            "rec_07138",
+            "rec_04719",
+            "rec_04657"
+          ],
+          "top_similarity": 0.3509,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 24.92,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_29",
+          "question": "How to cook traditional Kashmiri mutton rogan josh with whole spices and ratan jot?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_19104",
+            "rec_15774",
+            "rec_16579",
+            "rec_14406",
+            "rec_14961"
+          ],
+          "top_similarity": 0.3942,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 24.22,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_30",
+          "question": "How to make Ethiopian doro wat chicken stew with injera sourdough flatbread?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_18960",
+            "rec_17248",
+            "rec_15914",
+            "rec_17340",
+            "rec_15303"
+          ],
+          "top_similarity": 0.2705,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 24.37,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_31",
+          "question": "What is the traditional Nigerian jollof rice recipe cooked with smoked turkey and fried plantains?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_00247",
+            "rec_13000",
+            "rec_16525",
+            "rec_17926",
+            "rec_09429"
+          ],
+          "top_similarity": 0.3144,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 24.11,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_32",
+          "question": "How to make authentic Vietnamese Pho Bo 24-hour beef bone broth with star anise and rice noodles?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [
+            "rec_16584",
+            "rec_15797",
+            "rec_03919",
+            "rec_11719",
+            "rec_12091"
+          ],
+          "top_similarity": 0.3004,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 24.3,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        }
+      ]
+    },
+    "no_retrieval": {
+      "method_name": "No Retrieval Baseline (Direct Synthesis)",
+      "metrics": {
+        "mrr": 0.0,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "unanswerable_rejection_rate": 1.0,
+        "average_latency_ms": 0.0
+      },
+      "details": [
+        {
+          "id": "qa_01",
+          "question": "How can I bake chewy chocolate chip cookies?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01740",
+            "rec_01351"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_02",
+          "question": "What is a quick recipe for homemade tomatillo guacamole?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01841"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_03",
+          "question": "How do I make classic baked chicken parmesan with tomato sauce and mozzarella?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05604",
+            "rec_02586"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_04",
+          "question": "How to make a hearty beef and sweet potato chili in an Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00961"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_05",
+          "question": "What is the recipe for classic moist banana bread?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_02464",
+            "rec_03945"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_06",
+          "question": "How can I make coconut milk French toast with pineapple syrup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01328"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_07",
+          "question": "How do I make a crispy grilled pizza with fresh summer zucchini and tomatoes?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01122",
+            "rec_00202"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_08",
+          "question": "What ingredients go into Caesar salad roast chicken?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00014"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_09",
+          "question": "How to make traditional American homemade apple pie?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01583"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_10",
+          "question": "How to cook creamy risotto with mushrooms and fresh thyme?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00332"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_11",
+          "question": "How do I cook shrimp scampi with garlic, butter and lemon?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01439",
+            "rec_04053"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_12",
+          "question": "How to make butternut squash soup with pumpkin butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05942"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_13",
+          "question": "What is the recipe for classic bakery style blueberry muffins?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01843"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_14",
+          "question": "How to prepare pork carnitas in a pressure cooker or Instant Pot?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00441",
+            "rec_02289"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_15",
+          "question": "How to make a quick chilled summer tomato gazpacho soup?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00134"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_16",
+          "question": "How to make creamy homemade hummus served with spiced summer squash?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00607"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_17",
+          "question": "What are the steps to make traditional New England clam chowder?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_05946"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_18",
+          "question": "How to prepare a smooth and decadent dark chocolate mousse?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03509",
+            "rec_01347"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_19",
+          "question": "How to make crispy Baja style fish tacos with shredded cabbage and lime?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_03497",
+            "rec_01963"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_20",
+          "question": "How to make slow cooker or crock pot beef stew with potatoes and carrots?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_04054"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_21",
+          "question": "How to roast Brussels sprouts with a sweet honey glaze?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00774"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_22",
+          "question": "What is the recipe for classic oven baked beef lasagna with ricotta?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01544"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_23",
+          "question": "How to make rich cheddar potato soup with crispy bacon topping?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00586"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_24",
+          "question": "How to prepare the simplest holiday whole roast turkey?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01004",
+            "rec_00935"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_25",
+          "question": "How do I bake tender sweet cornbread muffins with whipped corn butter?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_00179"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_26",
+          "question": "How to prepare Thai rice noodles with chili oil and pomodoro sauce?",
+          "is_answerable": true,
+          "verified_ids": [
+            "rec_01088"
+          ],
+          "retrieved_ids": [],
+          "relevance_rank": 0,
+          "reciprocal_rank": 0.0,
+          "top_similarity": 0.0,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_27",
+          "question": "How do I make authentic South Indian fermented idli and medu vada with coconut chutney?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_28",
+          "question": "What is the recipe for Japanese takoyaki octopus balls with bonito flakes and kewpie mayo?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_29",
+          "question": "How to cook traditional Kashmiri mutton rogan josh with whole spices and ratan jot?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_30",
+          "question": "How to make Ethiopian doro wat chicken stew with injera sourdough flatbread?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_31",
+          "question": "What is the traditional Nigerian jollof rice recipe cooked with smoked turkey and fried plantains?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        },
+        {
+          "id": "qa_32",
+          "question": "How to make authentic Vietnamese Pho Bo 24-hour beef bone broth with star anise and rice noodles?",
+          "is_answerable": false,
+          "verified_ids": [],
+          "retrieved_ids": [],
+          "top_similarity": 0.0,
+          "correctly_flagged_unanswerable": true,
+          "latency_ms": 0.0,
+          "grounded_answer": "This culinary query cannot be answered from the recipe knowledge base. No verified recipes match this request."
+        }
+      ]
+    }
+  },
+  "summary": {
+    "winner": "semantic_faiss",
+    "faiss_mrr": 0.7468,
+    "tfidf_mrr": 0.2923,
+    "faiss_recall_at_1": 0.6538,
+    "faiss_recall_at_5": 0.8846,
+    "tfidf_recall_at_5": 0.5385,
+    "faiss_avg_latency_ms": 23.72,
+    "tfidf_avg_latency_ms": 25.61
+  }
+}

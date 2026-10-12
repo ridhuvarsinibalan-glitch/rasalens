@@ -1,0 +1,5381 @@
+{
+  "evaluation_dataset": "data\\ner\\gold_test.jsonl",
+  "evaluation_type": "strict_span_exact",
+  "sample_count": 160,
+  "rule_based_failures": [
+    {
+      "id": 4,
+      "type": "ingredient_line",
+      "text": "500 grams boneless skinless chicken breasts",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 28,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "chicken breasts"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 28,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "chicken breasts"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "ingredient_line",
+      "text": "1 can crushed San Marzano tomatoes",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 26,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "tomatoes"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 26,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "tomatoes"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ingredient_line",
+      "text": "3 large eggs, beaten",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "type": "ingredient_line",
+      "text": "1 packet active dry yeast",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "packet"
+        },
+        {
+          "start": 9,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "active dry yeast"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "packet"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 9,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "active dry yeast"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ingredient_line",
+      "text": "3/4 cup granulated sugar",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "3/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "granulated sugar"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "3/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "sugar"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "sugar"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 8,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "granulated sugar"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "type": "ingredient_line",
+      "text": "2 ripe avocados, pitted and mashed",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ripe"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ripe"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "type": "ingredient_line",
+      "text": "1 medium jalapeno pepper, seeded",
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "medium"
+        },
+        {
+          "start": 9,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "jalapeno pepper"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 18,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "pepper"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 18,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "pepper"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "medium"
+        },
+        {
+          "start": 9,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "jalapeno pepper"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "type": "ingredient_line",
+      "text": "1/4 cup cold water",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "water"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "water"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "type": "ingredient_line",
+      "text": "1 teaspoon ground coriander",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "ground coriander"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 18,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "coriander"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 18,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "coriander"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 11,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "ground coriander"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "type": "ingredient_line",
+      "text": "2 medium carrots, peeled and sliced",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "medium"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "medium"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "type": "ingredient_line",
+      "text": "1 large red bell pepper, diced",
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "red bell pepper"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 12,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "bell pepper"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 12,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "bell pepper"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "red bell pepper"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": "ingredient_line",
+      "text": "1/2 teaspoon smoked paprika",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "smoked paprika"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "smoked paprika"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "type": "ingredient_line",
+      "text": "1/4 teaspoon garlic powder",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "garlic powder"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "garlic"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 13,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "garlic"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 13,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "garlic powder"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "type": "ingredient_line",
+      "text": "1/4 teaspoon onion powder",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "onion powder"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "onion"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "onion"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "onion powder"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "type": "ingredient_line",
+      "text": "2 tablespoons vegetable oil",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        },
+        {
+          "start": 14,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "vegetable oil"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 14,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "vegetable oil"
+        }
+      ]
+    }
+  ],
+  "generic_spacy_failures": [
+    {
+      "id": 1,
+      "type": "ingredient_line",
+      "text": "2 tablespoons extra virgin olive oil",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        },
+        {
+          "start": 14,
+          "end": 36,
+          "label": "FOOD_ITEM",
+          "text": "extra virgin olive oil"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        },
+        {
+          "start": 14,
+          "end": 36,
+          "label": "FOOD_ITEM",
+          "text": "extra virgin olive oil"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ingredient_line",
+      "text": "1/2 cup finely diced yellow onion",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ingredient_line",
+      "text": "3 cloves garlic, minced",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "cloves"
+        },
+        {
+          "start": 9,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "garlic"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "cloves"
+        },
+        {
+          "start": 9,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "garlic"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ingredient_line",
+      "text": "500 grams boneless skinless chicken breasts",
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 3,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 9,
+          "label": "QUANTITY",
+          "text": "500 grams"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 0,
+          "end": 9,
+          "label": "QUANTITY",
+          "text": "500 grams"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ingredient_line",
+      "text": "1 teaspoon ground cumin",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "ground cumin"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "ground cumin"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ingredient_line",
+      "text": "1/4 teaspoon cayenne pepper",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "cayenne pepper"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "cayenne pepper"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ingredient_line",
+      "text": "2 cups low-sodium chicken broth",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "ingredient_line",
+      "text": "1 can crushed San Marzano tomatoes",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "ingredient_line",
+      "text": "200 grams paneer, cubed",
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 3,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "200"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "paneer"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 16,
+          "label": "QUANTITY",
+          "text": "200 grams paneer"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 0,
+          "end": 16,
+          "label": "QUANTITY",
+          "text": "200 grams paneer"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "200"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "paneer"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "ingredient_line",
+      "text": "1 pinch kosher salt",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "pinch"
+        },
+        {
+          "start": 8,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "kosher salt"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "pinch"
+        },
+        {
+          "start": 8,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "kosher salt"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "ingredient_line",
+      "text": "1/2 teaspoon freshly cracked black pepper",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ingredient_line",
+      "text": "3 large eggs, beaten",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "ingredient_line",
+      "text": "250 ml heavy whipping cream",
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 3,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "250"
+        },
+        {
+          "start": 4,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ml"
+        },
+        {
+          "start": 7,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "heavy whipping cream"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "QUANTITY",
+          "text": "250 ml"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "QUANTITY",
+          "text": "250 ml"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "250"
+        },
+        {
+          "start": 4,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ml"
+        },
+        {
+          "start": 7,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "heavy whipping cream"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "ingredient_line",
+      "text": "1 bunch fresh coriander leaves, chopped",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": "ingredient_line",
+      "text": "4 slices thick-cut bacon",
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ]
+    }
+  ],
+  "custom_spacy_failures": [
+    {
+      "id": 2,
+      "type": "ingredient_line",
+      "text": "1/2 cup finely diced yellow onion",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "finely diced yellow onion"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 8,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "finely diced yellow onion"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ingredient_line",
+      "text": "500 grams boneless skinless chicken breasts",
+      "tp_count": 2,
+      "fp_count": 0,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        }
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ingredient_line",
+      "text": "2 cups low-sodium chicken broth",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 7,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "low-sodium chicken broth"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 7,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "low-sodium chicken broth"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "ingredient_line",
+      "text": "1 can crushed San Marzano tomatoes",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "can"
+        },
+        {
+          "start": 6,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "crushed San Marzano tomatoes"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 6,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "crushed San Marzano tomatoes"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 14,
+          "end": 34,
+          "label": "FOOD_ITEM",
+          "text": "San Marzano tomatoes"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "ingredient_line",
+      "text": "1/2 teaspoon freshly cracked black pepper",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "freshly cracked black pepper"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 13,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "freshly cracked black pepper"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ingredient_line",
+      "text": "3 large eggs, beaten",
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "large eggs"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "large eggs"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "ingredient_line",
+      "text": "1 bunch fresh coriander leaves, chopped",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 8,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "fresh coriander leaves"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 8,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "fresh coriander leaves"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": "ingredient_line",
+      "text": "4 slices thick-cut bacon",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 9,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "thick-cut bacon"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 9,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "thick-cut bacon"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": "ingredient_line",
+      "text": "2 sprigs fresh rosemary",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "sprigs"
+        },
+        {
+          "start": 15,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "rosemary"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "sprigs"
+        },
+        {
+          "start": 9,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "fresh rosemary"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 9,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "fresh rosemary"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 15,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "rosemary"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ingredient_line",
+      "text": "1 stalk celery, finely sliced",
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "stalk"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "stalk celery"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 2,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "stalk celery"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "stalk"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ingredient_line",
+      "text": "100 grams grated parmesan cheese",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 17,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "parmesan cheese"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "grated parmesan cheese"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 10,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "grated parmesan cheese"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 17,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "parmesan cheese"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "type": "ingredient_line",
+      "text": "1 lb lean ground beef",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 4,
+          "label": "UNIT",
+          "text": "lb"
+        },
+        {
+          "start": 10,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "ground beef"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 4,
+          "label": "UNIT",
+          "text": "lb"
+        },
+        {
+          "start": 5,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "lean ground beef"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 5,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "lean ground beef"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 10,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "ground beef"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "type": "ingredient_line",
+      "text": "1 tablespoon fresh ginger, grated",
+      "tp_count": 2,
+      "fp_count": 2,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 19,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "fresh ginger"
+        },
+        {
+          "start": 27,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "grated"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "fresh ginger"
+        },
+        {
+          "start": 27,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "grated"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 19,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ingredient_line",
+      "text": "1 teaspoon pure vanilla extract",
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 1,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 16,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "vanilla extract"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "pure vanilla extract"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 11,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "pure vanilla extract"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 16,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "vanilla extract"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "type": "ingredient_line",
+      "text": "2 ripe avocados, pitted and mashed",
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 2,
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ripe"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ],
+      "pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "ripe avocados"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 2,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "ripe avocados"
+        }
+      ],
+      "false_negatives": [
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ripe"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ]
+    }
+  ],
+  "sentences_where_trained_beats_rules": [
+    {
+      "sentence": "500 grams boneless skinless chicken breasts",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "boneless skinless chicken breasts"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 28,
+          "end": 43,
+          "label": "FOOD_ITEM",
+          "text": "chicken breasts"
+        }
+      ],
+      "custom_errors": 1,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1 packet active dry yeast",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "packet"
+        },
+        {
+          "start": 9,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "active dry yeast"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "packet"
+        },
+        {
+          "start": 9,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "active dry yeast"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "packet"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "3/4 cup granulated sugar",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "3/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "granulated sugar"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "3/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "granulated sugar"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "3/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "sugar"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1 teaspoon ground coriander",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "ground coriander"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "ground coriander"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 18,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "coriander"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1/2 teaspoon smoked paprika",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "smoked paprika"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "smoked paprika"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1/4 teaspoon garlic powder",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "garlic powder"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "garlic powder"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "garlic"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1/4 teaspoon onion powder",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "onion powder"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "onion powder"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "onion"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "2 tablespoons vegetable oil",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        },
+        {
+          "start": 14,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "vegetable oil"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        },
+        {
+          "start": 14,
+          "end": 27,
+          "label": "FOOD_ITEM",
+          "text": "vegetable oil"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 13,
+          "label": "UNIT",
+          "text": "tablespoons"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1 cup sweet corn kernels",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 6,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "sweet corn kernels"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 6,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "sweet corn kernels"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 6,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "sweet corn"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1 tablespoon red curry paste",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 13,
+          "end": 28,
+          "label": "FOOD_ITEM",
+          "text": "red curry paste"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 13,
+          "end": 28,
+          "label": "FOOD_ITEM",
+          "text": "red curry paste"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "200 grams firm tofu, pressed",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "200"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "firm tofu"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "200"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "firm tofu"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "200"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "label": "FOOD_ITEM",
+          "text": "tofu"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "2 green onions, thinly sliced",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "green onions"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "green onions"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "onions"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "100 grams dark chocolate chips",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "dark chocolate chips"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "dark chocolate chips"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 15,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "chocolate chips"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "1 bay leaf",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "FOOD_ITEM",
+          "text": "bay leaf"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "FOOD_ITEM",
+          "text": "bay leaf"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "Can I cook dinner with 3 eggs, half a cup of milk and cheddar cheese?",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 23,
+          "end": 24,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 25,
+          "end": 29,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        },
+        {
+          "start": 31,
+          "end": 41,
+          "label": "QUANTITY",
+          "text": "half a cup"
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "label": "UNIT",
+          "text": "of"
+        },
+        {
+          "start": 45,
+          "end": 49,
+          "label": "FOOD_ITEM",
+          "text": "milk"
+        },
+        {
+          "start": 54,
+          "end": 68,
+          "label": "FOOD_ITEM",
+          "text": "cheddar cheese"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 23,
+          "end": 24,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 25,
+          "end": 29,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        },
+        {
+          "start": 31,
+          "end": 41,
+          "label": "QUANTITY",
+          "text": "half a cup"
+        },
+        {
+          "start": 45,
+          "end": 49,
+          "label": "FOOD_ITEM",
+          "text": "milk"
+        },
+        {
+          "start": 54,
+          "end": 68,
+          "label": "FOOD_ITEM",
+          "text": "cheddar cheese"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "UNIT",
+          "text": "Can"
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 25,
+          "end": 29,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        },
+        {
+          "start": 31,
+          "end": 41,
+          "label": "QUANTITY",
+          "text": "half a cup"
+        },
+        {
+          "start": 45,
+          "end": 49,
+          "label": "FOOD_ITEM",
+          "text": "milk"
+        }
+      ],
+      "custom_errors": 1,
+      "rule_errors": 3,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "Do you have 500 grams of boneless chicken and some plain yogurt?",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 12,
+          "end": 15,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 25,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "boneless chicken"
+        },
+        {
+          "start": 46,
+          "end": 50,
+          "label": "QUANTITY",
+          "text": "some"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "plain yogurt"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 12,
+          "end": 15,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 25,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "boneless chicken"
+        },
+        {
+          "start": 46,
+          "end": 50,
+          "label": "QUANTITY",
+          "text": "some"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "plain yogurt"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 12,
+          "end": 15,
+          "label": "QUANTITY",
+          "text": "500"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "chicken"
+        },
+        {
+          "start": 46,
+          "end": 50,
+          "label": "QUANTITY",
+          "text": "some"
+        },
+        {
+          "start": 57,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "yogurt"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 4,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "Add half a teaspoon of cinnamon and two cloves into the tea.",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 4,
+          "end": 19,
+          "label": "QUANTITY",
+          "text": "half a teaspoon"
+        },
+        {
+          "start": 23,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "cinnamon"
+        },
+        {
+          "start": 36,
+          "end": 39,
+          "label": "QUANTITY",
+          "text": "two"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "cloves"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 4,
+          "end": 19,
+          "label": "QUANTITY",
+          "text": "half a teaspoon"
+        },
+        {
+          "start": 23,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "cinnamon"
+        },
+        {
+          "start": 36,
+          "end": 39,
+          "label": "QUANTITY",
+          "text": "two"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "UNIT",
+          "text": "cloves"
+        },
+        {
+          "start": 47,
+          "end": 60,
+          "label": "FOOD_ITEM",
+          "text": "into the tea."
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 4,
+          "end": 10,
+          "label": "QUANTITY",
+          "text": "half a"
+        },
+        {
+          "start": 11,
+          "end": 19,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 36,
+          "end": 39,
+          "label": "QUANTITY",
+          "text": "two"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "UNIT",
+          "text": "cloves"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 6,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "What recipe uses 4 carrots, 2 stalks of celery and vegetable broth?",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 17,
+          "end": 18,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 19,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "label": "UNIT",
+          "text": "stalks"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        },
+        {
+          "start": 51,
+          "end": 66,
+          "label": "FOOD_ITEM",
+          "text": "vegetable broth"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 17,
+          "end": 18,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 19,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "label": "UNIT",
+          "text": "stalks"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        },
+        {
+          "start": 51,
+          "end": 66,
+          "label": "FOOD_ITEM",
+          "text": "vegetable broth"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 17,
+          "end": 18,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 19,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "label": "UNIT",
+          "text": "stalks"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 1,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "Can we make soup with 2 sweet potatoes, ginger and coconut milk?",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 22,
+          "end": 23,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 24,
+          "end": 38,
+          "label": "FOOD_ITEM",
+          "text": "sweet potatoes"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "coconut milk"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 22,
+          "end": 23,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 24,
+          "end": 38,
+          "label": "FOOD_ITEM",
+          "text": "sweet potatoes"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "coconut milk"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "UNIT",
+          "text": "Can"
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "FOOD_ITEM",
+          "text": "coconut milk"
+        }
+      ],
+      "custom_errors": 0,
+      "rule_errors": 2,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    },
+    {
+      "sentence": "I have half a block of cheddar cheese and a box of macaroni.",
+      "type": "pantry_sentence",
+      "gold": [
+        {
+          "start": 7,
+          "end": 19,
+          "label": "QUANTITY",
+          "text": "half a block"
+        },
+        {
+          "start": 23,
+          "end": 37,
+          "label": "FOOD_ITEM",
+          "text": "cheddar cheese"
+        },
+        {
+          "start": 42,
+          "end": 47,
+          "label": "QUANTITY",
+          "text": "a box"
+        },
+        {
+          "start": 51,
+          "end": 59,
+          "label": "FOOD_ITEM",
+          "text": "macaroni"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 7,
+          "end": 19,
+          "label": "QUANTITY",
+          "text": "half a block"
+        },
+        {
+          "start": 23,
+          "end": 37,
+          "label": "FOOD_ITEM",
+          "text": "cheddar cheese"
+        },
+        {
+          "start": 42,
+          "end": 60,
+          "label": "FOOD_ITEM",
+          "text": "a box of macaroni."
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 7,
+          "end": 13,
+          "label": "QUANTITY",
+          "text": "half a"
+        },
+        {
+          "start": 51,
+          "end": 59,
+          "label": "FOOD_ITEM",
+          "text": "macaroni"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 4,
+      "analysis": "Trained custom spaCy accurately extracts multiword items and natural conversational structures where rule-based regex fails or hallucinates spans."
+    }
+  ],
+  "sentences_where_rules_beat_trained": [
+    {
+      "sentence": "1/2 cup finely diced yellow onion",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "finely diced yellow onion"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 21,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "yellow onion"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "2 cups low-sodium chicken broth",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 7,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "low-sodium chicken broth"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "cups"
+        },
+        {
+          "start": 18,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "chicken broth"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1/2 teaspoon freshly cracked black pepper",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "freshly cracked black pepper"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 29,
+          "end": 41,
+          "label": "FOOD_ITEM",
+          "text": "black pepper"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "3 large eggs, beaten",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "large"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "large eggs"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "3"
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "label": "FOOD_ITEM",
+          "text": "eggs"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 1,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 bunch fresh coriander leaves, chopped",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 8,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "fresh coriander leaves"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "bunch"
+        },
+        {
+          "start": 14,
+          "end": 30,
+          "label": "FOOD_ITEM",
+          "text": "coriander leaves"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "4 slices thick-cut bacon",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 9,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "thick-cut bacon"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "4"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "slices"
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "label": "FOOD_ITEM",
+          "text": "bacon"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "2 sprigs fresh rosemary",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "sprigs"
+        },
+        {
+          "start": 15,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "rosemary"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "sprigs"
+        },
+        {
+          "start": 9,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "fresh rosemary"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "sprigs"
+        },
+        {
+          "start": 15,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "rosemary"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 stalk celery, finely sliced",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "stalk"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "stalk celery"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 7,
+          "label": "UNIT",
+          "text": "stalk"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "FOOD_ITEM",
+          "text": "celery"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "100 grams grated parmesan cheese",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 17,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "parmesan cheese"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "grated parmesan cheese"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "100"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 17,
+          "end": 32,
+          "label": "FOOD_ITEM",
+          "text": "parmesan cheese"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 lb lean ground beef",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 4,
+          "label": "UNIT",
+          "text": "lb"
+        },
+        {
+          "start": 10,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "ground beef"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 4,
+          "label": "UNIT",
+          "text": "lb"
+        },
+        {
+          "start": 5,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "lean ground beef"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 4,
+          "label": "UNIT",
+          "text": "lb"
+        },
+        {
+          "start": 10,
+          "end": 21,
+          "label": "FOOD_ITEM",
+          "text": "ground beef"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 tablespoon fresh ginger, grated",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 19,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 13,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "fresh ginger"
+        },
+        {
+          "start": 27,
+          "end": 33,
+          "label": "FOOD_ITEM",
+          "text": "grated"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 19,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "ginger"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 teaspoon pure vanilla extract",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 16,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "vanilla extract"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 11,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "pure vanilla extract"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 10,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 16,
+          "end": 31,
+          "label": "FOOD_ITEM",
+          "text": "vanilla extract"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "2 ripe avocados, pitted and mashed",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "UNIT",
+          "text": "ripe"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "ripe avocados"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "label": "FOOD_ITEM",
+          "text": "avocados"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 1,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 tablespoon freshly squeezed lime juice",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 30,
+          "end": 40,
+          "label": "FOOD_ITEM",
+          "text": "lime juice"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 13,
+          "end": 40,
+          "label": "FOOD_ITEM",
+          "text": "freshly squeezed lime juice"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 12,
+          "label": "UNIT",
+          "text": "tablespoon"
+        },
+        {
+          "start": 30,
+          "end": 40,
+          "label": "FOOD_ITEM",
+          "text": "lime juice"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1/4 cup chopped red onion",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "red onion"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "chopped red onion"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "label": "FOOD_ITEM",
+          "text": "red onion"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "400 grams cooked chickpeas",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "400"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 17,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "chickpeas"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "400"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 10,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "cooked chickpeas"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "400"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "UNIT",
+          "text": "grams"
+        },
+        {
+          "start": 17,
+          "end": 26,
+          "label": "FOOD_ITEM",
+          "text": "chickpeas"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1/4 cup cold water",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "water"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 8,
+          "end": 18,
+          "label": "FOOD_ITEM",
+          "text": "cold water"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/4"
+        },
+        {
+          "start": 4,
+          "end": 7,
+          "label": "UNIT",
+          "text": "cup"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 1,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1/2 teaspoon ground turmeric",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "label": "FOOD_ITEM",
+          "text": "turmeric"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 13,
+          "end": 28,
+          "label": "FOOD_ITEM",
+          "text": "ground turmeric"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "QUANTITY",
+          "text": "1/2"
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "label": "UNIT",
+          "text": "teaspoon"
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "label": "FOOD_ITEM",
+          "text": "turmeric"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "2 medium carrots, peeled and sliced",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 8,
+          "label": "UNIT",
+          "text": "medium"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 2,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "medium carrots"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "2"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "FOOD_ITEM",
+          "text": "carrots"
+        }
+      ],
+      "custom_errors": 3,
+      "rule_errors": 1,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    },
+    {
+      "sentence": "1 cup frozen green peas",
+      "type": "ingredient_line",
+      "gold": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 13,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "green peas"
+        }
+      ],
+      "custom_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 6,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "frozen green peas"
+        }
+      ],
+      "rule_pred": [
+        {
+          "start": 0,
+          "end": 1,
+          "label": "QUANTITY",
+          "text": "1"
+        },
+        {
+          "start": 2,
+          "end": 5,
+          "label": "UNIT",
+          "text": "cup"
+        },
+        {
+          "start": 13,
+          "end": 23,
+          "label": "FOOD_ITEM",
+          "text": "green peas"
+        }
+      ],
+      "custom_errors": 2,
+      "rule_errors": 0,
+      "analysis": "Rule-based baseline handles exact lexical patterns or uncommon compound tokens better than statistical model."
+    }
+  ]
+}
