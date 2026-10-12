@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   Sparkles, UtensilsCrossed, Layers, BarChart3, Info, 
-  Database, Cpu, Play, Globe, Bot 
+  Database, Cpu, Play, Globe, Bot, Network, Video 
 } from 'lucide-react';
 import { api } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
@@ -22,8 +22,10 @@ export default function Navbar({ onStartDemo }) {
     { to: '/studio', label: t('nav.studio', 'Analyze Studio'), icon: UtensilsCrossed, highlight: true },
     { to: '/assistant', label: t('nav.assistant', 'Assistant'), icon: Bot },
     { to: '/recipes', label: t('nav.recipes', 'Recipes'), icon: Database },
+    { to: '/graph', label: t('nav.graph', 'Ingredient Graph'), icon: Network },
     { to: '/model-lab', label: t('nav.model_lab', 'Model Lab'), icon: Layers },
     { to: '/insights', label: t('nav.insights', 'Insights'), icon: BarChart3 },
+    { to: '/videos', label: t('nav.videos', 'Videos'), icon: Video },
     { to: '/about', label: t('nav.about', 'About'), icon: Info },
   ];
 

@@ -15,7 +15,8 @@ import {
   Globe2,
   Mic,
   Award,
-  Bot
+  Bot,
+  Network
 } from 'lucide-react';
 import { api } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
@@ -83,6 +84,14 @@ export default function HomePage() {
       icon: BarChart3,
       link: '/insights',
       tag: 'Quality: 99.1%'
+    },
+    {
+      title: t('nav.graph', 'Ingredient Graph'),
+      subtitle: 'Association Network & Lift',
+      desc: 'Interactive 2D force-directed knowledge graph of ingredient pairings, co-occurrences, and market basket affinities.',
+      icon: Network,
+      link: '/graph',
+      tag: 'Interactive Graph'
     }
   ];
 

@@ -8,6 +8,8 @@ import RecipeAssistantPage from './pages/RecipeAssistantPage';
 import RecipeExplorerPage from './pages/RecipeExplorerPage';
 import ModelLabPage from './pages/ModelLabPage';
 import InsightsDashboardPage from './pages/InsightsDashboardPage';
+import IngredientGraphPage from './pages/IngredientGraphPage';
+import VideoIntelligencePage from './pages/VideoIntelligencePage';
 import AboutPage from './pages/AboutPage';
 import RecipeDetailPage from './pages/RecipeDetailPage';
 import { LanguageProvider } from './context/LanguageContext';
@@ -139,8 +141,10 @@ function MainLayout() {
           <Route path="/assistant" element={<RecipeAssistantPage />} />
           <Route path="/recipes" element={<RecipeExplorerPage />} />
           <Route path="/recipes/:recipeId" element={<RecipeDetailPage />} />
+          <Route path="/graph" element={<IngredientGraphPage />} />
           <Route path="/model-lab" element={<ModelLabPage />} />
           <Route path="/insights" element={<InsightsDashboardPage />} />
+          <Route path="/videos" element={<VideoIntelligencePage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </main>
