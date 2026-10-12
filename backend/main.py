@@ -17,6 +17,7 @@ from backend.api import (
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("rasalens.main")
+# Active culinary NLP engine router
 
 app = FastAPI(
     title="RasaLens API",
