@@ -1,6 +1,6 @@
 // RasaLens API Client Service
 
-const BASE_URL = ''; // Proxied via Vite to http://127.0.0.1:8000
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
 export const api = {
   async getHealth() {
